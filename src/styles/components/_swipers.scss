@@ -1,0 +1,151 @@
+@import "../fonts/fonts";
+@import "../var/var";
+
+#swipers {
+    padding-bottom: 15px;
+    overflow-x: hidden;
+
+    #title {
+        color: var(--header-color);
+        text-align: center;
+
+        font-family: "SF Pro Display";
+        font-size: calc(48 / #{$desktop} * 100vw);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        margin-top: calc(120 / #{$desktop} * 100vw);
+        margin-bottom: calc(60 / #{$desktop} * 100vw);
+    }
+
+    .container {
+        border-radius: 40px;
+        background: #FBFBFB;
+        width: calc(1100 / #{$desktop} * 100vw);
+        margin: 0 auto;
+
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+        padding: calc(40 / #{$desktop} * 100vw);
+
+        .swiper-container {
+            position: relative;
+        }
+
+        .item-title {
+            color: var(--header-color);
+
+            font-family: "SF Pro Display";
+            font-size: calc(48 / #{$desktop} * 100vw);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+            margin-top: calc(64 / #{$desktop} * 100vw);
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: calc(40 / #{$desktop} * 100vw);
+
+            #content-info {
+                display: grid;
+                border-radius: 16px;
+                margin-top: auto;
+                margin-left: calc(20 / #{$desktop} * 100vw);
+                margin-bottom: calc(20 / #{$desktop} * 100vw);
+
+                h5 {
+                    color: #1E1E1E;
+
+                    font-family: "SF Pro Display";
+                    font-size: calc(24 / #{$desktop} * 100vw);
+                    font-weight: 700;
+                    line-height: 116.667%;
+                }
+
+                .icon-wrapper {
+                    grid-column-start: 1;
+                    height: calc(60 / #{$desktop} * 100vw);
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 60px;
+                    padding: calc(9 / #{$desktop} * 100vw);
+                    margin-right: calc(28 / #{$desktop} * 100vw);
+                    background: rgba(38, 57, 46, .4);
+
+                    .icon {
+                        border-radius: 60px;
+                        padding: calc(9 / #{$desktop} * 100vw);
+                        background: var(--header-color);
+                    }
+                }
+
+                p {
+                    margin-top: calc(20 / #{$desktop} * 100vw);
+                    color: #3C3C3C;
+                    font-family: "SF Pro Display";
+                    font-size: calc(18 / #{$desktop} * 100vw);
+                    font-weight: 400;
+                    line-height: 140%;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: calc(459 / #{$desktop} * 100vw);
+                border-radius: 40px;
+                margin: auto 0;
+                object-fit: cover;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .pagination {
+        display: inline-flex;
+        z-index: 100;
+        position: absolute;
+        height: calc(48 / #{$desktop} * 100vw);
+        top: calc(20 / #{$desktop} * 100vw);
+        left: calc(20 / #{$desktop} * 100vw);
+        width: auto;
+        border-radius: 6px;
+        background: #92CEEF;
+        padding: calc(4 / #{$desktop} * 100vw) calc(0 / #{$desktop} * 100vw) calc(4 / #{$desktop} * 100vw);
+    }
+
+    .swiper-slide {
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
+
+    .swiper-slide-active {
+        opacity: 1;
+    }
+
+
+    .swiper-pagination-bullet {
+        background: none;
+        opacity: 1;
+        width: unset;
+        height: unset;
+        border-radius: 6px;
+        color: var(--dark-blue, #042833);
+
+        font-family: "SF Pro Display";
+        font-size: calc(16 / #{$desktop} * 100vw);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 175%;
+        padding: calc(6 / #{$desktop} * 100vw) calc(20 / #{$desktop} * 100vw);
+    }
+
+    .active {
+        background: var(--white);
+    }
+}

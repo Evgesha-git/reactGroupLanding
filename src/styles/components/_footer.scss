@@ -1,0 +1,155 @@
+@import "../fonts/fonts";
+@import "../var/var";
+
+#footer {
+    margin-top: calc(150 / #{$desktop} * 100vw);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background: #080808;
+    border-radius: 40px 40px 0 0;
+    height: calc(304 / #{$desktop} * 100vw);
+    padding: calc(60 / #{$desktop} * 100vw) calc(56 / #{$desktop} * 100vw) calc(20 / #{$desktop} * 100vw);
+
+    #main-info {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: left;
+
+        #title {
+            color: #FFF;
+            font-family: "SF Pro Display";
+            font-size: calc(48 / #{$desktop} * 100vw);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+        }
+
+        #text {
+            color: #FFF;
+
+            font-family: "SF Pro Display";
+            font-size: calc(18 / #{$desktop} * 100vw);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            letter-spacing: calc(0.36 / #{$desktop} * 100vw);
+            margin-top: calc(6 / #{$desktop} * 100vw);
+        }
+    }
+
+    #email {
+        grid-column-start: 7;
+        grid-column-end: 11;
+
+        #getintouch {
+            color: #FFF;
+
+            font-family: "SF Pro Display";
+            font-size: calc(24 / #{$desktop} * 100vw);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 116.667%;
+        }
+
+        form {
+            margin-top: calc(20 / #{$desktop} * 100vw);
+            display: flex;
+            justify-content: space-between;
+            border-radius: 6px;
+            background: #FFF;
+            padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw) calc(26 / #{$desktop} * 100vw);
+
+            input {
+                background: none;
+                border: none;
+                outline: none;
+                color: #1E1E1E;
+                font-family: "SF Pro Display";
+                font-size: calc(16 / #{$desktop} * 100vw);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+                letter-spacing: calc(0.32 / #{$desktop} * 100vw);
+            }
+
+            ::placeholder {
+                color: #1E1E1E;
+                font-family: "SF Pro Display";
+                font-size: calc(16 / #{$desktop} * 100vw);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+                letter-spacing: calc(0.32 / #{$desktop} * 100vw);
+            }
+
+            button {
+                cursor: pointer;
+                border: none;
+                border-radius: 4px;
+                background: #1E1E1E;
+                padding: calc(7 / #{$desktop} * 100vw) calc(32 / #{$desktop} * 100vw);
+
+                color: #FFF;
+                text-align: center;
+                font-family: "SF Pro Display";
+                font-size: calc(16 / #{$desktop} * 100vw);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+
+                letter-spacing: calc(0.32 / #{$desktop} * 100vw);
+            }
+
+            button:hover {
+                background: #26392E;
+                color: var(--frame-color);
+            }
+        }
+
+        #condition {
+            margin-top: calc(12 / #{$desktop} * 100vw);
+            color: var(--main-text-color);
+            font-family: "SF Pro Display";
+            font-size: calc(12 / #{$desktop} * 100vw);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            letter-spacing: calc(0.24 / #{$desktop} * 100vw);
+
+            a {
+                color: var(--main-text-color);
+                font-weight: 700;
+            }
+        }
+    }
+
+    #footer-bottom {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        gap: calc(20 / #{$desktop} * 100vw);
+        display: flex;
+        justify-content: space-between;
+
+        #links {
+            display: flex;
+            margin-top: calc(42 / #{$desktop} * 100vw);
+
+            a,
+            p {
+                text-decoration: none;
+                color: #FFF;
+                font-family: "SF Pro Display";
+                font-size: calc(16 / #{$desktop} * 100vw);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 175%;
+                padding: calc(6 / #{$desktop} * 100vw) calc(10 / #{$desktop} * 100vw);
+            }
+
+            #copyright {
+                color: #FFF;
+                opacity: 0.20000000298023224;
+            }
+        }
+    }
+}

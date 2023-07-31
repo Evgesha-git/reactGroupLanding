@@ -1,0 +1,24 @@
+$white: #e9f6ed;
+$white2: #f8f8f8;
+
+$text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+$bsh: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+$black: #1e1e1e;
+$black2: #3c3c3c;
+$black3: #606060;
+
+$desktop: 1440;
+
+:root {
+    --accent-color: linear-gradient(223deg, #95b8fd 28.74%, #b6ffda 88.91%);
+    --accent-light-color: #aaffce;
+    --header-color: #26392e;
+    --stroke-color: #dce2de;
+    --dark-blue: #042833;
+    --frame-color: #f4fbfd;
+    --nav-back-color: #c9d9cf;
+    --main-text-color: #4e6d5b;
+    --white: #fff;
+    --main-text-color: #4e6d5b;
+    --nav-back-color: #c9d9cf;
+}

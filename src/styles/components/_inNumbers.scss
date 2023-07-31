@@ -1,0 +1,215 @@
+@import "../var/var";
+@import "../fonts/fonts";
+
+#stats {
+    margin: 0 auto;
+    width: calc(1100 / #{$desktop} * 100vw);
+    gap: calc(30 / #{$desktop} * 100vw);
+
+    #title {
+        color: $black;
+        text-align: center;
+        font-family: "SF Pro Display";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        margin-top: calc(115 / #{$desktop} * 100vw);
+    }
+
+    .number__counter {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1040px;
+        margin: 62px auto 30px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: -30px;
+            bottom: -30px;
+            left: -100px;
+            right: -100px;
+            border-radius: 40px;
+            background: $white2;
+            opacity: 0.5;
+            box-shadow: $bsh;
+            z-index: -1;
+        }
+
+        .items {
+            .nums {
+                color: $black;
+                font-family: "SF Pro Display";
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+            .desc {
+                color: $black2;
+                font-family: "SF Pro Display";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 25.2px */
+                letter-spacing: 0.36px;
+            }
+        }
+
+        // div {
+        //     display: flex;
+        //     gap: calc(10 / #{$desktop} * 100vw);
+        //     flex-direction: column;
+        //     text-align: center;
+        //     padding: calc(30 / #{$desktop} * 100vw);
+        // }
+
+        // div:last-child {
+        //     padding: calc(30 / #{$desktop} * 100vw) 0;
+        // }
+
+        // .number {
+        //     color: var(--header-color);
+
+        //     font-family: "SF Pro Display";
+        //     font-size: calc(48 / #{$desktop} * 100vw);
+        //     font-style: normal;
+        //     font-weight: 700;
+        //     line-height: 140%;
+        // }
+
+        // p {
+        //     color: var(--main-text-color);
+
+        //     font-family: "SF Pro Display";
+        //     font-size: calc(18 / #{$desktop} * 100vw);
+        //     font-style: normal;
+        //     font-weight: 500;
+        //     line-height: 140%;
+        //     letter-spacing: calc(0.36 / #{$desktop} * 100vw);
+        // }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    #stats {
+        width: calc(1100 / #{$desktop} * 100vw);
+        gap: calc(30 / #{$desktop} * 100vw);
+
+        .number__counter {
+
+            div {
+                gap: calc(10 / #{$desktop} * 100vw);
+                padding: calc(30 / #{$desktop} * 100vw);
+            }
+
+            div:last-child {
+                padding: calc(30 / #{$desktop} * 100vw) 0;
+            }
+
+            .number {
+                color: var(--header-color);
+                // font-size: calc(48 / #{$desktop} * 100vw);
+            }
+
+            p {
+                // font-size: calc(18 / #{$desktop} * 100vw);
+                letter-spacing: calc(0.36 / #{$desktop} * 100vw);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 804px) {
+    #stats {
+        .number__counter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+
+            &::before {
+
+                top: -30px;
+                bottom: -30px;
+                left: 0px;
+                right: 0px;
+            }
+
+            
+        }
+    }
+}
+
+// .section__numbers {
+//     padding: 0 20px;
+//     border: 1px solid transparent;
+//     margin-bottom: 120px;
+
+//     .container {
+//         max-width: 1440px;
+//         margin: 0 auto;
+//         padding: 0 100px;
+
+//         .numbers__title {
+//             color: $black;
+//             text-align: center;
+//             font-family: 'SF Pro Display';
+//             font-size: 40px;
+//             font-style: normal;
+//             font-weight: 700;
+//             line-height: 140%;
+//         }
+
+//         .number__counter {
+//             display: flex;
+//             justify-content: space-between;
+//             max-width: 1040px;
+//             margin: 62px auto 30px;
+//             position: relative;
+
+//             &::before {
+//                 position: absolute;
+//                 display: block;
+//                 content: "";
+//                 top: -30px;
+//                 bottom: -30px;
+//                 left: -100px;
+//                 right: -100px;
+//                 border-radius: 40px;
+//                 background: $white2;
+//                 opacity: 0.5;
+//                 box-shadow: $bsh;
+//                 z-index: -1;
+//             }
+
+//             .items {
+//                 opacity: 1;
+//                 .nums {
+//                     color: $black;
+//                     font-family: 'SF Pro Display Bold';
+//                     font-size: 36px;
+//                     font-style: normal;
+//                     font-weight: 700;
+//                     line-height: 140%;
+//                     text-align: center;
+//                 }
+//                 .desc {
+//                     color: $black2;
+//                     font-family: 'SF Pro Display';
+//                     font-size: 18px;
+//                     font-style: normal;
+//                     font-weight: 400;
+//                     line-height: 140%; /* 25.2px */
+//                     letter-spacing: 0.36px;
+//                 }
+//             }
+//         }
+//     }
+// }

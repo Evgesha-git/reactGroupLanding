@@ -1,0 +1,93 @@
+@import '../fonts/fonts';
+@import '../var/var';
+
+#adv {
+    padding: calc(120 / #{$desktop} * 100vw) 0 0;
+    width: calc(1100 / #{$desktop} * 100vw);
+    margin: 0 auto;
+
+    #title {
+        color: var(--header-color);
+        text-align: center;
+
+        font-family: "SF Pro Display";
+        font-size: calc(48 / #{$desktop} * 100vw);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        padding-bottom: calc(60 / #{$desktop} * 100vw);
+    }
+
+    #items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: calc(30 / #{$desktop} * 100vw);
+
+        .item {
+            border-radius: 40px;
+            background: #F8F8F8;
+            padding: calc(30 / #{$desktop} * 100vw);
+            border: 1px solid #eaf1f1;
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+            position: relative;
+
+            .icon-wrapper {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 60px;
+                padding: calc(9 / #{$desktop} * 100vw);
+                margin-right: calc(28 / #{$desktop} * 100vw);
+                background: rgba(146, 206, 239, .4);
+
+                .icon {
+                    border-radius: 60px;
+                    padding: calc(9 / #{$desktop} * 100vw);
+                    background: #92CEEF;
+
+                    svg {
+                        width: calc(24 / #{$desktop} * 100vw);
+                        height: calc(24 / #{$desktop} * 100vw);
+                    }
+                }
+            }
+
+            h5 {
+                color: var(--header-color);
+                font-family: "SF Pro Display";
+                font-size: calc(24 / #{$desktop} * 100vw);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 116.667%;
+                margin-bottom: calc(16 / #{$desktop} * 100vw);
+                margin-top: calc(32 / #{$desktop} * 100vw);
+            }
+
+            p {
+                color: var(--main-text-color);
+
+                font-family: "SF Pro Display";
+                font-size: calc(16 / #{$desktop} * 100vw);
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                letter-spacing: calc(0.36 / #{$desktop} * 100vw);
+            }
+
+            img {
+                position: absolute;
+                z-index: 2;
+                right: 0;
+                bottom: 0;
+                border-radius: 0 0 16px 0;
+                width: calc(223 / #{$desktop} * 100vw);
+            }
+        }
+    }
+
+    .line{
+        height: 2px;
+        background: $black3;
+        margin-top: 120px;
+    }
+}

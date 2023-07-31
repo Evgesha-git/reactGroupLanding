@@ -1,0 +1,78 @@
+@import "../fonts/fonts";
+@import "../var/var";
+
+#principles {
+    margin: calc(120 / #{$desktop} * 100vw) auto 0;
+    width: calc(1100 / #{$desktop} * 100vw);
+
+    #top {
+        margin-bottom: calc(120 / #{$desktop} * 100vw);
+    }
+
+    #title {
+        color: var(--header-color);
+        text-align: center;
+
+        font-family: "SF Pro Display";
+        font-size: calc(48 / #{$desktop} * 100vw);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+    }
+
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: calc(30 / #{$desktop} * 100vw);
+        margin: calc(60 / #{$desktop} * 100vw) 15px;
+        align-items: flex-start;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: calc(6 / #{$desktop} * 100vw);
+        width: calc(456 / #{$desktop} * 100vw);
+
+        svg {
+            width: calc(72 / #{$desktop} * 100vw);
+            margin: 0 auto;
+        }
+
+        .title-item {
+            margin-top: calc(14 / #{$desktop} * 100vw);
+            color: var(--header-color);
+            text-align: center;
+            font-family: "SF Pro Display";
+            font-size: calc(20 / #{$desktop} * 100vw);
+            font-style: normal;
+            font-weight: 800;
+            line-height: 140%;
+        }
+
+        p {
+            color: var(--main-text-color);
+            text-align: center;
+            font-family: "SF Pro Display";
+            font-size: calc(14 / #{$desktop} * 100vw);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+        }
+    }
+
+    .item:first-child {
+        margin-left: auto;
+    }
+
+    .item:nth-child(3) {
+        margin-top: calc(84 / #{$desktop} * 100vw);
+        margin-left: auto;
+    }
+
+    .item:nth-child(4) {
+        margin-top: calc(84 / #{$desktop} * 100vw);
+    }
+}

@@ -1,0 +1,27 @@
+@import './fonts/_fonts.scss';
+@import './var/_var.scss';
+@import './components/_header.scss';
+@import './components/inNumbers';
+@import './components/world';
+@import "./components/activities";
+@import './components/adv';
+@import './components/principles';
+@import './components/swipers';
+@import './components/international';
+@import './components/our-cutting';
+@import './components/footer';
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

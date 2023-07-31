@@ -1,0 +1,125 @@
+@import "../fonts/fonts";
+@import "../var/var";
+
+#our-cutting {
+    margin: 0 auto;
+    width: calc(1100 / #{$desktop} * 100vw);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(30 / #{$desktop} * 100vw);
+
+    #title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        color: var(--dark-blue);
+        text-align: center;
+
+        font-family: "SF Pro Display";
+        font-size: calc(48 / #{$desktop} * 100vw);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        margin-top: calc(120 / #{$desktop} * 100vw);
+        margin-bottom: calc(60 / #{$desktop} * 100vw);
+    }
+
+    .item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: calc(40 / #{$desktop} * 100vw);
+        border-radius: 40px;
+        height: calc(570 / #{$desktop} * 100vw);
+        box-shadow: 0px 0px 16px 0px rgba(38, 50, 57, 0.08);
+        text-decoration: none;
+
+        h3 {
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+
+            font-family: "SF Pro Display";
+            font-size: calc(40 / #{$desktop} * 100vw);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+        }
+
+        p {
+            position: relative;
+            z-index: 2;
+            color: #F3F9FE;
+            font-family: "SF Pro Display";
+            font-size: calc(20.104 / #{$desktop} * 100vw);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+        }
+
+        #button {
+            position: relative;
+            z-index: 2;
+            padding: calc(9 / #{$desktop} * 100vw) calc(26 / #{$desktop} * 100vw);
+            background: #0B6B9E;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+            color: #FFF;
+            text-align: center;
+            font-family: "SF Pro Display";
+            font-size: calc(24 / #{$desktop} * 100vw);
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%;
+            border-radius: 40px;
+        }
+    }
+
+    .item:after {
+        z-index: 1;
+        position: absolute;
+        border-radius: 16px;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 2.74%, #000 100%);
+        border-radius: 40px;
+    }
+
+    #geniuspay {
+        background: url(../../images/geniuspay-img.png);
+        background-size: cover;
+    }
+
+    #tibiti {
+        background: url(../../images/tibiti-img.png);
+        background-size: cover;
+    }
+
+    #job {
+        justify-content: flex-end;
+        background: url(../../images/menegetti.png);
+        background-size: cover;
+        height: calc(671 / #{$desktop} * 100vw);
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding: calc(70 / #{$desktop} * 100vw) calc(100 / #{$desktop} * 100vw);
+
+        div:first-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            div {
+                flex-direction: column;
+                text-align: left;
+
+                p {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
