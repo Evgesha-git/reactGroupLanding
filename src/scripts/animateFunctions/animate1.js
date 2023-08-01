@@ -1,5 +1,6 @@
 import anime from "animejs";
-import { animationEasing, del1, del2, del3 } from "../animateSlider";
+import { animationEasing, del1, del2, del3, dd1, dd2, dd3, dd4, dd5 } from "../animateSlider";
+
 export const slide1 = async () => {
     const item1 = document.querySelector("#item_1_1");
     const item2 = document.querySelector("#item_1_2");
@@ -21,7 +22,7 @@ export const slide1 = async () => {
         opacity: [0, 1],
         translateX: ["100%", 0],
         duration: del1,
-        delay: 300,
+        delay: dd1,
         easing: animationEasing,
     });
     const a3 = anime({
@@ -29,7 +30,7 @@ export const slide1 = async () => {
         opacity: [0, 1],
         translateX: ["100%", 0],
         duration: del1,
-        delay: 600,
+        delay: dd2,
         easing: animationEasing,
     });
     const a4 = anime({
@@ -37,7 +38,7 @@ export const slide1 = async () => {
         opacity: [0, 1],
         translateX: ["100%", 0],
         duration: del1,
-        delay: 700,
+        delay: dd3,
         easing: animationEasing,
     });
     const a5 = anime({
@@ -45,7 +46,7 @@ export const slide1 = async () => {
         opacity: [0, 1],
         translateX: ["100%", 0],
         duration: del1,
-        delay: 900,
+        delay: dd4,
         easing: animationEasing,
     });
 
@@ -54,7 +55,7 @@ export const slide1 = async () => {
         opacity: [0, 1],
         translateY: ["100%", 0],
         duration: del3,
-        delay: 1000,
+        delay: dd5,
         easing: animationEasing,
     });
 
@@ -91,7 +92,7 @@ export const slide1Rev = async () => {
         opacity: [0, 1],
         translateX: ["100%", 0],
         duration: del1,
-        delay: 300,
+        delay: dd1,
         easing: animationEasing,
     });
 
@@ -101,7 +102,7 @@ export const slide1Rev = async () => {
         opacity: [0, 1],
         translateX: ["100%", 0],
         duration: del1,
-        delay: 600,
+        delay: dd2,
         easing: animationEasing,
     });
 
@@ -111,7 +112,7 @@ export const slide1Rev = async () => {
         opacity: [0, 1],
         translateX: ["100%", 0],
         duration: del1,
-        delay: 700,
+        delay: dd3,
         easing: animationEasing,
     });
     const a5_2 = anime({
@@ -120,7 +121,7 @@ export const slide1Rev = async () => {
         opacity: [0, 1],
         translateX: ["80%", 0],
         duration: del1,
-        delay: 700,
+        delay: dd3,
         easing: animationEasing,
     });
 
@@ -130,7 +131,7 @@ export const slide1Rev = async () => {
         opacity: [0, 1],
         translateY: ["100%", 0],
         duration: del3,
-        delay: 1000,
+        delay: dd5,
         easing: animationEasing,
     });
 
@@ -148,7 +149,7 @@ export const slide1Rev = async () => {
         opacity: [1, 0],
         translateX: [0, "100%"],
         duration: del1,
-        delay: 300,
+        delay: dd1,
         easing: animationEasing,
     });
 
@@ -157,7 +158,7 @@ export const slide1Rev = async () => {
         opacity: [1, 0],
         translateX: [0, "100%"],
         duration: del1,
-        delay: 600,
+        delay: dd2,
         easing: animationEasing,
     });
 
@@ -166,7 +167,7 @@ export const slide1Rev = async () => {
         opacity: [1, 0],
         translateX: [0, "100%"],
         duration: del1,
-        delay: 700,
+        delay: dd3,
         easing: animationEasing,
     });
     const a5 = anime({

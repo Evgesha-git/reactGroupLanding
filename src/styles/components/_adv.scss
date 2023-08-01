@@ -12,77 +12,85 @@
             text-align: center;
 
             font-family: "SF Pro Display";
-            font-size: calc(48 / #{$desktop} * 100vw);
+            font-size: 48px;
             font-style: normal;
             font-weight: 700;
             line-height: 140%;
-            padding-bottom: calc(60 / #{$desktop} * 100vw);
+            padding-bottom: 60px;
         }
 
         #items {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: calc(30 / #{$desktop} * 100vw);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
 
             .item {
                 border-radius: 40px;
                 background: #f8f8f8;
-                padding: calc(30 / #{$desktop} * 100vw);
+                // padding: calc(30 / #{$desktop} * 100vw);\
+                padding: 25px 30px; 
                 border: 1px solid #eaf1f1;
                 box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
                 position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                max-width: 288px;
 
                 .icon-wrapper {
-                    height: 118px;
-                    position: relative;
+                    // height: 118px;
+                    // position: relative;
 
                     .icon {
-                        position: absolute;
-                        height: 100%;
-                        top: 50%;
-                        bottom: 50%;
-                        left: 50%;
-                        right: 50%;
-                        width: 100%;
-                        transform: translate(-50%, 8%);
+                        // position: absolute;
+                        // height: 100%;
+                        // top: 50%;
+                        // bottom: 50%;
+                        // left: 50%;
+                        // right: 50%;
+                        // width: 100%;
+                        // transform: translate(-50%, 8%);
 
-                        img {
-                            width: 100%;
-                            transform: scale(0.8);
-                        }
+                        // img {
+                        //     width: 100%;
+                        //     transform: scale(0.8);
+                        // }
                     }
                 }
 
                 h5 {
+                    text-align: center;
                     color: var(--header-color);
                     font-family: "SF Pro Display";
-                    font-size: calc(24 / #{$desktop} * 100vw);
+                    font-size: 24px;
                     font-style: normal;
                     font-weight: 700;
                     line-height: 116.667%;
-                    margin-bottom: calc(16 / #{$desktop} * 100vw);
-                    margin-top: calc(32 / #{$desktop} * 100vw);
+                    margin-top: 17px;
+                    margin-bottom: 10px;
                 }
 
                 p {
                     color: var(--main-text-color);
-
+                    text-align: center;
                     font-family: "SF Pro Display";
-                    font-size: calc(16 / #{$desktop} * 100vw);
+                    font-size: 16px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 140%;
                     letter-spacing: calc(0.36 / #{$desktop} * 100vw);
                 }
 
-                img {
-                    position: absolute;
-                    z-index: 2;
-                    right: 0;
-                    bottom: 0;
-                    border-radius: 0 0 16px 0;
-                    width: calc(223 / #{$desktop} * 100vw);
-                }
+                // img {
+                //     position: absolute;
+                //     z-index: 2;
+                //     right: 0;
+                //     bottom: 0;
+                //     border-radius: 0 0 16px 0;
+                //     width: calc(223 / #{$desktop} * 100vw);
+                // }
             }
         }
 

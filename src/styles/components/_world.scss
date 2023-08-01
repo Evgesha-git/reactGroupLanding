@@ -66,7 +66,7 @@
             text-align: center;
 
             font-family: "SF Pro Display";
-            font-size: calc(48 / #{$desktop} * 100vw);
+            font-size: 48px;
             font-style: normal;
             font-weight: 700;
             line-height: 140%;
@@ -77,7 +77,7 @@
             margin-top: 40px;
             display: flex;
             gap: 30px;
-            // flex-wrap: wrap;
+            flex-wrap: wrap;
             justify-content: center;
 
             .item {
@@ -160,13 +160,17 @@
                     margin-top: calc(20 / #{$desktop} * 100vw);
                 }
 
-                img {
-                    width: calc(228 / #{$desktop} * 100vw);
+                .img {
+                    width: 75%;
+                    // width: calc(228 / #{$desktop} * 100vw);
                     margin: 0 auto;
                     // position: absolute;
                     // top: calc(18 / #{$desktop} * 100vw);
                     // right: calc(18 / #{$desktop} * 100vw);
                     // width: calc(90 / #{$desktop} * 100vw);
+                    img {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -175,7 +179,7 @@
     @media only screen and (max-width: 1440px) {
         #reactworld {
             padding: calc(60 / #{$desktop} * 100vw) 0 0;
-            // width: calc(1100 / #{$desktop} * 100vw);
+            width: calc(1100 / #{$desktop} * 100vw);
             margin: 0 auto;
 
             #office {
@@ -184,37 +188,29 @@
 
             #title {
                 margin-top: calc(120 / #{$desktop} * 100vw);
-                font-size: calc(48 / #{$desktop} * 100vw);
+                // font-size: calc(48 / #{$desktop} * 100vw);
                 margin-bottom: calc(60 / #{$desktop} * 100vw);
             }
 
-            .container {
-                gap: calc(40 / #{$desktop} * 100vw);
-                // margin: calc(58 / #{$desktop} * 100vw) auto;
+            //     .container {
+            //         gap: calc(40 / #{$desktop} * 100vw);
+            //         margin: calc(58 / #{$desktop} * 100vw) auto;
 
-                .item {
-                    padding: calc(40 / #{$desktop} * 100vw);
+            //         .item {
+            //             padding: calc(40 / #{$desktop} * 100vw);
 
-                    a {
-                        padding: calc(7 / #{$desktop} * 100vw) calc(32 / #{$desktop} * 100vw);
-                        font-size: calc(16 / #{$desktop} * 100vw);
-                        letter-spacing: calc(0.32 / #{$desktop} * 100vw);
-                        margin-top: calc(20 / #{$desktop} * 100vw);
-                    }
+            //             a {
+            //                 padding: calc(7 / #{$desktop} * 100vw) calc(32 / #{$desktop} * 100vw);
+            //                 font-size: calc(16 / #{$desktop} * 100vw);
+            //                 letter-spacing: calc(0.32 / #{$desktop} * 100vw);
+            //                 margin-top: calc(20 / #{$desktop} * 100vw);
+            //             }
 
-                    img {
-                        width: calc(228 / #{$desktop} * 100vw);
-                    }
-                }
-            }
-        }
-    }
-
-    @media only screen and (max-width: 1300px) {
-        #reactworld {
-            .container {
-                flex-wrap: wrap;
-            }
+            //             img {
+            //                 width: calc(228 / #{$desktop} * 100vw);
+            //             }
+            //         }
+            //     }
         }
     }
 

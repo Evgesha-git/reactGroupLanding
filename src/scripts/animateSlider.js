@@ -6,9 +6,15 @@ import { slide4, slide4Rev } from "./animateFunctions/animate4";
 
 export const animationEasing = "easeInOutCubic";
 export const container = document.querySelector("#principles");
-export const del1 = 400;
-export const del2 = 300;
-export const del3 = 200;
+export const del1 = 300;
+export const del2 = 200;
+export const del3 = 100;
+
+export const dd1 = 100;
+export const dd2 = 300;
+export const dd3 = 350;
+export const dd4 = 450;
+export const dd5 = 500;
 
 export const sliderAnimate = () => {
     function* getAnimate() {
@@ -45,19 +51,32 @@ export const sliderAnimate = () => {
         next: true,
         forvart: false,
     };
+    const touches = {
+        start: 0,
+        end: 0,
+    };
+    let isVisible = false;
 
     let done;
 
-    const callbeck = (entries, observer) => {
+    const callbeck = async (entries, observer) => {
         if (entries[0].isIntersecting) {
             // console.log(entries);
             // console.log(observer);
             document.body.style.overflow = "hidden";
+            setTimeout(() => {
+                console.log(entries[0].isIntersecting);
+                container.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }, 100);
+            isVisible = true;
         }
     };
 
     const options = {
-        threshold: 0.9,
+        threshold: 0.5,
     };
 
     const observer = new IntersectionObserver(callbeck, options);
@@ -77,6 +96,7 @@ export const sliderAnimate = () => {
                         waiting = !waiting;
                         if (done) {
                             document.body.style.overflow = "";
+                            isVisible = false;
                         }
                     });
                     isWheel.next = false;
@@ -91,6 +111,7 @@ export const sliderAnimate = () => {
                         waiting = !waiting;
                         if (done) {
                             document.body.style.overflow = "";
+                            isVisible = false;
                         }
                     });
                     isWheel.forvart = true;
@@ -104,6 +125,58 @@ export const sliderAnimate = () => {
                     return;
                 }
             }
+        }
+    });
+
+    window.addEventListener("touchstart", (e) => {
+        console.log(e.touches[0].pageY);
+        touches.start = e.touches[0].pageY;
+        let ee = new TouchEvent(e);
+    });
+
+    window.addEventListener("touchend", (e) => {
+        // console.log(e.changedTouches[0].pageY);
+        touches.end = e.changedTouches[0].pageY;
+        let dir = touches.start - touches.end;
+
+        if (dir > 0 && !isWheel.forvart && isVisible) {
+            let f;
+            const data = iter.next();
+            f = data?.value;
+            done = data.done;
+            waiting = !waiting;
+
+            f?.next().then(() => {
+                waiting = !waiting;
+                if (done) {
+                    document.body.style.overflow = "";
+                    isVisible = false;
+                }
+            });
+            isWheel.next = false;
+        } else if (dir < 0 && isWheel.next && isVisible) {
+            let f;
+            const data = iter.next();
+            f = data?.value;
+            done = data.done;
+            waiting = !waiting;
+
+            f?.forvard().then(() => {
+                waiting = !waiting;
+                if (done) {
+                    document.body.style.overflow = "";
+                    isVisible = false;
+                }
+            });
+            isWheel.forvart = true;
+        }
+        if (done && waiting) {
+            // document.body.style.overflow = "";
+            iter = getAnimate();
+            isWheel.forvart = false;
+            isWheel.next = true;
+            endAnimate = true;
+            return;
         }
     });
 };
