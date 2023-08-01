@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Swiper from "swiper";
 import "swiper/scss";
+import { sliderAnimate } from "./scripts/animateSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -248,14 +249,14 @@ function initAnimations() {
         });
     });
 
-    gsap.utils.toArray("#principles #title, #principles .item").forEach((element) => {
-        animateScrollTrigger(element, {
-            trigger: "#principles",
-            start: "top 100%",
-            end: "bottom 100%",
-            markers: false,
-        });
-    });
+    // gsap.utils.toArray("#principles #title, #principles .item").forEach((element) => {
+    //     animateScrollTrigger(element, {
+    //         trigger: "#principles",
+    //         start: "top 100%",
+    //         end: "bottom 100%",
+    //         markers: false,
+    //     });
+    // });
 
     gsap.utils.toArray("#swipers #title, #swipers .container").forEach((element) => {
         animateScrollTrigger(element, {
@@ -294,3 +295,5 @@ function initAnimations() {
         });
     });
 }
+
+sliderAnimate();
