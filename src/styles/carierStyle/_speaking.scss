@@ -1,0 +1,94 @@
+@import "../var/var";
+@import "../fonts/fonts";
+
+#wrapper__carier {
+    .speaking {
+        padding: 120px 20px 0;
+        border: 1px solid transparent;
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            border: 1px solid transparent;
+
+            .title {
+                color: $black;
+                text-align: center;
+                font-family: SF Pro Display;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%; /* 56px */
+            }
+
+            .items {
+                margin-top: 40px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+
+                .item {
+                    position: relative;
+                    padding: 50px 30px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    max-width: 288px;
+                    border-radius: 40px;
+
+                    &::after {
+                        position: absolute;
+                        display: block;
+                        content: "";
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        border-radius: 40px;
+                        background: rgba(248, 248, 248, 0.5);
+                        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+                        z-index: -1;
+                    }
+
+                    .title {
+                        font-family: SF Pro Display;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 28px;
+                    }
+
+                    .raite {
+                        display: flex;
+                        gap: 10px;
+                        align-items: flex-start;
+
+                        .stars {
+                            display: flex;
+                            gap: 2px;
+                        }
+                        .date {
+                            text-align: right;
+                            color: $black2;
+                            font-family: SF Pro Display;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                        }
+                    }
+
+                    .desc {
+                        color: $black2;
+                        font-family: SF Pro Display;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                    }
+                }
+            }
+        }
+    }
+}

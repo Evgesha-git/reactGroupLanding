@@ -1,0 +1,46 @@
+@import "../var/var";
+@import "../fonts/fonts";
+
+#wrapper__carier {
+    .gonor {
+        padding: 120px 20px 0;
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 100px;
+
+            .title {
+                color: $black;
+                text-align: center;
+                font-family: SF Pro Display;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%; /* 42px */
+            }
+
+            .image {
+                margin-top: 40px;
+                background: url(../../images/carier/gonor_bg.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 559px;
+                position: relative;
+                border-radius: 30px;
+
+                &::after {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 175px;
+                    border-radius: 30px;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.74%, #000 100%);
+                }
+            }
+        }
+    }
+}

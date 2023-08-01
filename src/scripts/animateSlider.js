@@ -6,9 +6,9 @@ import { slide4, slide4Rev } from "./animateFunctions/animate4";
 
 export const animationEasing = "easeInOutCubic";
 export const container = document.querySelector("#principles");
-export const del1 = 900;
-export const del2 = 700;
-export const del3 = 300;
+export const del1 = 400;
+export const del2 = 300;
+export const del3 = 200;
 
 export const sliderAnimate = () => {
     function* getAnimate() {

@@ -1,383 +1,381 @@
 @import "../var/var";
 @import "../fonts/fonts";
 
-#main {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    background: #000;
-    border-radius: 0px 0px 40px 40px;
-    height: calc(640 / #{$desktop} * 100vw);
-
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 299px;
-        // height: 50%;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.74%, #000 100%);
-        z-index: 1;
-    }
-
-    video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 0px 0px 40px 40px;
-    }
-
-    .content{
-        max-width: 1440px;
-        margin: 0 auto;
-    }
-
-    #header {
-        grid-column-start: 1;
-        grid-column-end: 13;
-        height: calc(74 / #{$desktop} * 100vw);
-        padding: calc(17 / #{$desktop} * 100vw) calc(15 / #{$desktop} * 100vw);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        #logotype {
-            padding: 6px 10px;
-            color: #e9f6ed;
-            font-family: Exo;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 175%;
-            text-decoration: none;
-            position: relative;
-            z-index: 999;
-        }
-
-        #buttons {
-            display: flex;
-            position: relative;
-            gap: 20px;
-        }
-
-        button {
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: #e9f6ed;
-
-            font-family: Exo;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 175%;
-        }
-
-        button:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 4px;
-        }
-
-        #contact-us {
-            grid-column-start: 8;
-            padding: calc(6 / #{$desktop} * 100vw) calc(10 / #{$desktop} * 100vw);
-        }
-
-        #language {
-            display: flex;
-            align-items: center;
-            gap: calc(8 / #{$desktop} * 100vw);
-            padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw);
-
-            svg {
-                width: calc(20 / #{$desktop} * 100vw);
-            }
-
-            div svg {
-                width: calc(6 / #{$desktop} * 100vw);
-            }
-        }
-
-        #language div {
-            display: flex;
-            align-items: center;
-            gap: calc(6 / #{$desktop} * 100vw);
-        }
-
-        #languages-change {
-            position: absolute;
-            display: none;
-            right: 0;
-            top: calc(50 / #{$desktop} * 100vw);
-            background: #fff;
-            border-radius: 4px;
-            border: 1px solid var(--stroke-color);
-            box-shadow: 0px 0px 16px 0px rgba(38, 57, 46, 0.08);
-            padding: calc(8 / #{$desktop} * 100vw) 0;
-
-            font-family: "SF Pro Display";
-            font-size: calc(16 / #{$desktop} * 100vw);
-            font-style: normal;
-            font-weight: 500;
-            line-height: 175%;
-
-            #ru-language,
-            #en-language {
-                color: var(--dark-blue);
-                cursor: pointer;
-                width: 100%;
-                border-radius: unset;
-                display: flex;
-                font-weight: 500;
-                align-items: center;
-                gap: calc(10 / #{$desktop} * 100vw);
-                padding: calc(2 / #{$desktop} * 100vw) calc(12 / #{$desktop} * 100vw);
-            }
-
-            .active {
-                background: var(--frame-color);
-                border-radius: unset;
-
-                .active-mark {
-                    background: var(--accent-color);
-                }
-            }
-
-            .active-mark {
-                width: 8px;
-                height: 8px;
-                border-radius: 20px;
-                background: var(--nav-back-color);
-            }
-
-            img {
-                width: calc(16 / #{$desktop} * 100vw);
-                border-radius: 20px;
-            }
-        }
-    }
-
-    #offer {
-        position: relative;
-        // top: calc(210 / #{$desktop} * 100vw);
-        left: calc(100 / #{$desktop} * 100vw);
-        top: calc(332 / #{$desktop} * 100vw);
-        width: calc(598 / #{$desktop} * 100vw);
-        z-index: 999;
-
-        #title {
-            color: #e9f6ed;
-            font-family: 'SF Pro Display';
-            font-size: 60px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        #subtitle {
-            margin-top: calc(16 / #{$desktop} * 100vw);
-            color: #e9f6ed;
-            font-family: 'SF Pro Display';
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            letter-spacing: calc(0.36 / #{$desktop} * 100vw);
-        }
-
-        #email {
-            margin-top: calc(32 / #{$desktop} * 100vw);
-
-            form {
-                margin-top: calc(20 / #{$desktop} * 100vw);
-                display: flex;
-                justify-content: space-between;
-                border-radius: 6px;
-                background: rgba(231, 244, 236, 0.4);
-                padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw) calc(26 / #{$desktop} * 100vw);
-
-                input {
-                    background: none;
-                    border: none;
-                    outline: none;
-                    color: #c9d9cf;
-                    font-family: 'SF Pro Display';
-                    font-size: calc(16 / #{$desktop} * 100vw);
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 140%;
-                    letter-spacing: calc(0.32 / #{$desktop} * 100vw);
-                }
-
-                ::placeholder {
-                    color: #c9d9cf;
-                    font-family: 'SF Pro Display';
-                    font-size: calc(16 / #{$desktop} * 100vw);
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 140%;
-                    letter-spacing: calc(0.32 / #{$desktop} * 100vw);
-                }
-
-                button {
-                    cursor: pointer;
-                    border: none;
-                    border-radius: 4px;
-                    background: #fff;
-                    padding: calc(7 / #{$desktop} * 100vw) calc(32 / #{$desktop} * 100vw);
-
-                    color: var(--header-color);
-                    text-align: center;
-                    font-family: 'SF Pro Display';
-                    font-size: calc(16 / #{$desktop} * 100vw);
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 140%;
-
-                    letter-spacing: calc(0.32 / #{$desktop} * 100vw);
-                }
-
-                button:hover {
-                    background: #26392e;
-                    color: var(--frame-color);
-                }
-            }
-
-            #condition {
-                margin-top: calc(12 / #{$desktop} * 100vw);
-                color: var(--main-text-color);
-                font-family: 'SF Pro Display';
-                font-size: calc(12 / #{$desktop} * 100vw);
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                letter-spacing: calc(0.24 / #{$desktop} * 100vw);
-                opacity: 0.4000000059604645;
-
-                a {
-                    color: var(--main-text-color);
-                    font-weight: 700;
-                }
-            }
-        }
-    }
-}
-
-
-@media only screen and (max-width: 1440px){
+#wrapper__index {
     #main {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        background: #000;
+        border-radius: 0px 0px 40px 40px;
         height: calc(640 / #{$desktop} * 100vw);
-    
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 299px;
+            // height: 50%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.74%, #000 100%);
+            z-index: 1;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0px 0px 40px 40px;
+        }
+
+        .content {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
 
         #header {
+            grid-column-start: 1;
+            grid-column-end: 13;
             height: calc(74 / #{$desktop} * 100vw);
             padding: calc(17 / #{$desktop} * 100vw) calc(15 / #{$desktop} * 100vw);
-    
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
             #logotype {
-                padding: calc(6 / #{$desktop} * 100vw) calc(10 / #{$desktop} * 100vw);
-                // font-size: calc(16 / #{$desktop} * 100vw);
+                padding: 6px 10px;
+                color: #e9f6ed;
+                font-family: Exo;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 175%;
+                text-decoration: none;
+                position: relative;
+                z-index: 999;
             }
-    
+
+            #buttons {
+                display: flex;
+                position: relative;
+                gap: 20px;
+            }
+
+            button {
+                cursor: pointer;
+                background: none;
+                border: none;
+                color: #e9f6ed;
+
+                font-family: Exo;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 175%;
+            }
+
+            button:hover {
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 4px;
+            }
+
             #contact-us {
+                grid-column-start: 8;
                 padding: calc(6 / #{$desktop} * 100vw) calc(10 / #{$desktop} * 100vw);
             }
-    
+
             #language {
+                display: flex;
+                align-items: center;
                 gap: calc(8 / #{$desktop} * 100vw);
                 padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw);
-    
+
                 svg {
                     width: calc(20 / #{$desktop} * 100vw);
                 }
-    
+
                 div svg {
                     width: calc(6 / #{$desktop} * 100vw);
                 }
             }
-    
+
             #language div {
+                display: flex;
+                align-items: center;
                 gap: calc(6 / #{$desktop} * 100vw);
             }
-    
+
             #languages-change {
+                position: absolute;
+                display: none;
+                right: 0;
                 top: calc(50 / #{$desktop} * 100vw);
+                background: #fff;
+                border-radius: 4px;
+                border: 1px solid var(--stroke-color);
+                box-shadow: 0px 0px 16px 0px rgba(38, 57, 46, 0.08);
                 padding: calc(8 / #{$desktop} * 100vw) 0;
+
+                font-family: "SF Pro Display";
                 font-size: calc(16 / #{$desktop} * 100vw);
-    
+                font-style: normal;
+                font-weight: 500;
+                line-height: 175%;
+
                 #ru-language,
                 #en-language {
+                    color: var(--dark-blue);
+                    cursor: pointer;
+                    width: 100%;
+                    border-radius: unset;
+                    display: flex;
+                    font-weight: 500;
+                    align-items: center;
                     gap: calc(10 / #{$desktop} * 100vw);
                     padding: calc(2 / #{$desktop} * 100vw) calc(12 / #{$desktop} * 100vw);
                 }
-    
+
+                .active {
+                    background: var(--frame-color);
+                    border-radius: unset;
+
+                    .active-mark {
+                        background: var(--accent-color);
+                    }
+                }
+
+                .active-mark {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 20px;
+                    background: var(--nav-back-color);
+                }
+
                 img {
                     width: calc(16 / #{$desktop} * 100vw);
-
+                    border-radius: 20px;
                 }
             }
         }
-    
+
         #offer {
             position: relative;
+            // top: calc(210 / #{$desktop} * 100vw);
             left: calc(100 / #{$desktop} * 100vw);
             top: calc(332 / #{$desktop} * 100vw);
             width: calc(598 / #{$desktop} * 100vw);
             z-index: 999;
-    
+
             #title {
-                font-size: calc(60 / #{$desktop} * 100vw);
+                color: #e9f6ed;
+                font-family: "SF Pro Display";
+                font-size: 60px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
             }
-    
+
             #subtitle {
                 margin-top: calc(16 / #{$desktop} * 100vw);
+                color: #e9f6ed;
+                font-family: "SF Pro Display";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
                 letter-spacing: calc(0.36 / #{$desktop} * 100vw);
             }
-    
+
             #email {
                 margin-top: calc(32 / #{$desktop} * 100vw);
-    
+
                 form {
                     margin-top: calc(20 / #{$desktop} * 100vw);
+                    display: flex;
+                    justify-content: space-between;
+                    border-radius: 6px;
+                    background: rgba(231, 244, 236, 0.4);
                     padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw) calc(26 / #{$desktop} * 100vw);
-    
+
                     input {
+                        background: none;
+                        border: none;
+                        outline: none;
+                        color: #c9d9cf;
+                        font-family: "SF Pro Display";
                         font-size: calc(16 / #{$desktop} * 100vw);
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 140%;
                         letter-spacing: calc(0.32 / #{$desktop} * 100vw);
                     }
-    
+
                     ::placeholder {
+                        color: #c9d9cf;
+                        font-family: "SF Pro Display";
                         font-size: calc(16 / #{$desktop} * 100vw);
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 140%;
                         letter-spacing: calc(0.32 / #{$desktop} * 100vw);
                     }
-    
+
                     button {
+                        cursor: pointer;
+                        border: none;
+                        border-radius: 4px;
+                        background: #fff;
                         padding: calc(7 / #{$desktop} * 100vw) calc(32 / #{$desktop} * 100vw);
+
+                        color: var(--header-color);
+                        text-align: center;
+                        font-family: "SF Pro Display";
                         font-size: calc(16 / #{$desktop} * 100vw);
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 140%;
+
                         letter-spacing: calc(0.32 / #{$desktop} * 100vw);
+                    }
+
+                    button:hover {
+                        background: #26392e;
+                        color: var(--frame-color);
                     }
                 }
-    
+
                 #condition {
                     margin-top: calc(12 / #{$desktop} * 100vw);
+                    color: var(--main-text-color);
+                    font-family: "SF Pro Display";
                     font-size: calc(12 / #{$desktop} * 100vw);
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
                     letter-spacing: calc(0.24 / #{$desktop} * 100vw);
+                    opacity: 0.4000000059604645;
 
+                    a {
+                        color: var(--main-text-color);
+                        font-weight: 700;
+                    }
                 }
             }
         }
     }
-}
 
-@media only screen and (max-width: 600px){
-    #logotype{
-        color: $black;
+    @media only screen and (max-width: 1440px) {
+        #main {
+            height: calc(640 / #{$desktop} * 100vw);
+
+            #header {
+                height: calc(74 / #{$desktop} * 100vw);
+                padding: calc(17 / #{$desktop} * 100vw) calc(15 / #{$desktop} * 100vw);
+
+                #logotype {
+                    padding: calc(6 / #{$desktop} * 100vw) calc(10 / #{$desktop} * 100vw);
+                    // font-size: calc(16 / #{$desktop} * 100vw);
+                }
+
+                #contact-us {
+                    padding: calc(6 / #{$desktop} * 100vw) calc(10 / #{$desktop} * 100vw);
+                }
+
+                #language {
+                    gap: calc(8 / #{$desktop} * 100vw);
+                    padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw);
+
+                    svg {
+                        width: calc(20 / #{$desktop} * 100vw);
+                    }
+
+                    div svg {
+                        width: calc(6 / #{$desktop} * 100vw);
+                    }
+                }
+
+                #language div {
+                    gap: calc(6 / #{$desktop} * 100vw);
+                }
+
+                #languages-change {
+                    top: calc(50 / #{$desktop} * 100vw);
+                    padding: calc(8 / #{$desktop} * 100vw) 0;
+                    font-size: calc(16 / #{$desktop} * 100vw);
+
+                    #ru-language,
+                    #en-language {
+                        gap: calc(10 / #{$desktop} * 100vw);
+                        padding: calc(2 / #{$desktop} * 100vw) calc(12 / #{$desktop} * 100vw);
+                    }
+
+                    img {
+                        width: calc(16 / #{$desktop} * 100vw);
+                    }
+                }
+            }
+
+            #offer {
+                position: relative;
+                left: calc(100 / #{$desktop} * 100vw);
+                top: calc(332 / #{$desktop} * 100vw);
+                width: calc(598 / #{$desktop} * 100vw);
+                z-index: 999;
+
+                #title {
+                    font-size: calc(60 / #{$desktop} * 100vw);
+                }
+
+                #subtitle {
+                    margin-top: calc(16 / #{$desktop} * 100vw);
+                    letter-spacing: calc(0.36 / #{$desktop} * 100vw);
+                }
+
+                #email {
+                    margin-top: calc(32 / #{$desktop} * 100vw);
+
+                    form {
+                        margin-top: calc(20 / #{$desktop} * 100vw);
+                        padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw) calc(26 / #{$desktop} * 100vw);
+
+                        input {
+                            font-size: calc(16 / #{$desktop} * 100vw);
+                            letter-spacing: calc(0.32 / #{$desktop} * 100vw);
+                        }
+
+                        ::placeholder {
+                            font-size: calc(16 / #{$desktop} * 100vw);
+                            letter-spacing: calc(0.32 / #{$desktop} * 100vw);
+                        }
+
+                        button {
+                            padding: calc(7 / #{$desktop} * 100vw) calc(32 / #{$desktop} * 100vw);
+                            font-size: calc(16 / #{$desktop} * 100vw);
+                            letter-spacing: calc(0.32 / #{$desktop} * 100vw);
+                        }
+                    }
+
+                    #condition {
+                        margin-top: calc(12 / #{$desktop} * 100vw);
+                        font-size: calc(12 / #{$desktop} * 100vw);
+                        letter-spacing: calc(0.24 / #{$desktop} * 100vw);
+                    }
+                }
+            }
+        }
     }
 
-    #title {
-        font-size: 48px;
+    @media only screen and (max-width: 600px) {
+        #logotype {
+            color: $black;
+        }
+
+        #title {
+            font-size: 48px;
+        }
     }
 }

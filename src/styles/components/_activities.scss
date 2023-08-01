@@ -1,91 +1,93 @@
 @import "../fonts/fonts";
 @import "../var/var";
 
-.section__activities {
-    padding: 0;
-    margin-bottom: 80px;
-    box-sizing: border-box;
+#wrapper__index {
+    .section__activities {
+        padding: 0;
+        margin-bottom: 80px;
+        box-sizing: border-box;
 
-    .container {
-        padding: 0 100px;
-        max-width: 1440px;
-        margin: 0 auto 80px;
+        .container {
+            padding: 0 100px;
+            max-width: 1440px;
+            margin: 0 auto 80px;
 
-        .activities__title {
-            color: $black;
-            text-align: center;
-            font-family: SF Pro Display;
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 140%;
-        }
+            .activities__title {
+                color: $black;
+                text-align: center;
+                font-family: SF Pro Display;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+            }
 
-        .activities__items {
-            display: flex;
-            justify-content: center;
-            // flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 30px;
+            .activities__items {
+                display: flex;
+                justify-content: center;
+                // flex-wrap: wrap;
+                gap: 30px;
+                margin-top: 30px;
 
-            .item {
-                position: relative;
-                max-width: 288px;
-                // max-height: 282px;
-                height: 283px;
-                padding: 30px;
-                box-sizing: border-box;
+                .item {
+                    position: relative;
+                    max-width: 288px;
+                    // max-height: 282px;
+                    height: 283px;
+                    padding: 30px;
+                    box-sizing: border-box;
 
-                &::after {
-                    position: absolute;
-                    display: block;
-                    content: "";
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    border-radius: 40px;
-                    opacity: 0.5;
-                    background: $white2;
-                    box-shadow: $bsh;
-                    z-index: -1;
-                }
-
-                .ico {
-                    width: 60px;
-                    height: 60px;
-                    img {
+                    &::after {
+                        position: absolute;
                         display: block;
-                        width: 100%;
+                        content: "";
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        border-radius: 40px;
+                        opacity: 0.5;
+                        background: $white2;
+                        box-shadow: $bsh;
+                        z-index: -1;
+                    }
+
+                    .ico {
+                        width: 60px;
+                        height: 60px;
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+
+                    .title {
+                        margin-top: 21px;
+                        color: $black;
+                        font-family: SF Pro Display;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 28px;
+                    }
+
+                    .desc {
+                        margin-top: 10px;
+                        color: $black2;
+                        font-family: SF Pro Display;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
                     }
                 }
-
-                .title {
-                    margin-top: 21px;
-                    color: $black;
-                    font-family: SF Pro Display;
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 28px;
-                }
-
-                .desc {
-                    margin-top: 10px;
-                    color: $black2;
-                    font-family: SF Pro Display;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 140%;
-                }
             }
-        }
 
-        .line{
-            height: 2px;
-            background: $black3;
-            margin-top: 120px;
+            .line {
+                height: 2px;
+                background: $black3;
+                margin-top: 120px;
+            }
         }
     }
 }

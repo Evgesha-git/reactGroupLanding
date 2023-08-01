@@ -27,7 +27,12 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            filename: 'index.html',
             template: path.resolve(__dirname, "src", "html/index.html"),
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'carier.html',
+            template: path.resolve(__dirname, "src", "html/carier.html"),
         }),
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash].css",

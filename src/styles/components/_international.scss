@@ -1,198 +1,200 @@
 @import "../fonts/fonts";
 @import "../var/var";
 
-#international {
-    overflow-x: hidden;
+#wrapper__index {
+    #international {
+        overflow-x: hidden;
 
-    #title {
-        color: #1E1E1E;
-        text-align: center;
-
-        font-family: "SF Pro Display";
-        font-size: calc(40 / #{$desktop} * 100vw);
-        font-weight: 700;
-        line-height: 140%;
-        margin-top: calc(100 / #{$desktop} * 100vw);
-        margin-bottom: calc(40 / #{$desktop} * 100vw);
-    }
-
-    .navigation {
-        display: flex;
-        justify-content: center;
-        margin-top: calc(60 / #{$desktop} * 100vw);
-        margin-bottom: calc(46 / #{$desktop} * 100vw);
-        gap: calc(16 / #{$desktop} * 100vw);
-
-        button {
-            cursor: pointer;
-            border-radius: 50px;
-            border: 1px solid rgba(220, 226, 222, 0.40);
-            background: var(--frame-color);
-            border: 1px solid rgba(220, 226, 222, 0.40);
-
-            color: var(--main-text-color);
-
-            font-family: "SF Pro Display";
-            font-size: calc(16 / #{$desktop} * 100vw);
-            font-style: normal;
-            font-weight: 700;
-            line-height: 175%;
-            padding: calc(6 / #{$desktop} * 100vw) calc(20 / #{$desktop} * 100vw);
-        }
-
-        .active {
-            background: var(--dark-blue);
-            color: #F3F9FE;
-        }
-    }
-
-    .container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        gap: calc(30 / #{$desktop} * 100vw);
-        width: calc(1100 / #{$desktop} * 100vw);
-        margin: 0 auto;
-
-        #top {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: calc(30 / #{$desktop} * 100vw);
-        }
-
-        #bottom {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: calc(30 / #{$desktop} * 100vw);
-        }
-
-        .item {
-            font-family: "SF Pro Display";
-            position: relative;
-            padding: 0 calc(40 / #{$desktop} * 100vw) calc(50 / #{$desktop} * 100vw);
-            height: calc(564 / #{$desktop} * 100vw);
-            border-radius: 40px;
-            // width: calc(393 / #{$desktop} * 100vw);
-
-            .content {
-                position: relative;
-                z-index: 2;
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-                gap: calc(20 / #{$desktop} * 100vw);
-
-                h2 {
-                    margin-top: auto;
-                    color: #FFF;
-                    font-size: calc(40 / #{$desktop} * 100vw);
-                    font-weight: 700;
-                    line-height: 120%;
-                }
-
-                p {
-                    color: #FFF;
-                    font-size: calc(16 / #{$desktop} * 100vw);
-                    font-weight: 400;
-                    line-height: 140%;
-                }
-            }
-        }
-
-        .item:first-child {
-            background: url(../../images/it-bg-f13371ca.jpg.png);
-            background-size: cover;
-            background-position: right;
-            margin-left: auto;
-        }
-
-        .item:nth-child(2) {
-            background: url(../../images/it-bg-f13371ca2.png);
-            background-size: cover;
-            background-position: center;
-        }
-
-        .item:nth-child(3) {
-            background: url(../../images/it-bg-f13371ca3.png);
-            background-size: cover;
-            background-position: center;
-        }
-
-        #bottom {
-            .item:nth-child(1) {
-                margin-left: auto;
-                background: url(../../images/it-bg-f13371ca4.png);
-                background-size: cover;
-                background-position: center;
-                justify-self: center;
-            }
-
-            .item:nth-child(2) {
-                background: url(../../images/it-bg-f13371ca5.png);
-                background-size: cover;
-                background-position: center;
-            }
-        }
-
-        .item::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: calc(12 / #{$desktop} * 100vw);
-            bottom: 0;
-            border-radius: 40px;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 2.74%, #000 100%);
-        }
-    }
-
-    .wrapper {
-        margin: 0 135px 0;
-        display: grid;
-        align-items: center;
-        gap: calc(112 / #{$desktop} * 100vw);
-        grid-template-columns: auto auto;
-        border-radius: 16px;
-        border: 1px solid rgb(220, 226, 222);
-        background: var(--accent-color);
-        padding: calc(40 / #{$desktop} * 100vw);
-        box-shadow: 0px 0px 16px 0px rgba(38, 50, 57, 0.08);
-
-        .item-title {
-            color: var(--dark-blue);
+        #title {
+            color: #1e1e1e;
+            text-align: center;
 
             font-family: "SF Pro Display";
             font-size: calc(40 / #{$desktop} * 100vw);
-            font-style: normal;
             font-weight: 700;
             line-height: 140%;
+            margin-top: calc(100 / #{$desktop} * 100vw);
+            margin-bottom: calc(40 / #{$desktop} * 100vw);
         }
 
-        .content {
-            margin-top: calc(32 / #{$desktop} * 100vw);
-            border-radius: 16px;
-            border: 1px solid rgb(220, 226, 222);
-            background: var(--accent-color);
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: calc(60 / #{$desktop} * 100vw);
+            margin-bottom: calc(46 / #{$desktop} * 100vw);
+            gap: calc(16 / #{$desktop} * 100vw);
 
-            box-shadow: 0px 0px 16px 0px rgba(38, 50, 57, 0.08);
-            padding: calc(24 / #{$desktop} * 100vw);
+            button {
+                cursor: pointer;
+                border-radius: 50px;
+                border: 1px solid rgba(220, 226, 222, 0.4);
+                background: var(--frame-color);
+                border: 1px solid rgba(220, 226, 222, 0.4);
 
-            p {
                 color: var(--main-text-color);
 
                 font-family: "SF Pro Display";
-                font-size: calc(18 / #{$desktop} * 100vw);
+                font-size: calc(16 / #{$desktop} * 100vw);
                 font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                letter-spacing: calc(0.36 / #{$desktop} * 100vw);
+                font-weight: 700;
+                line-height: 175%;
+                padding: calc(6 / #{$desktop} * 100vw) calc(20 / #{$desktop} * 100vw);
+            }
+
+            .active {
+                background: var(--dark-blue);
+                color: #f3f9fe;
             }
         }
 
-        img {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            gap: calc(30 / #{$desktop} * 100vw);
+            width: calc(1100 / #{$desktop} * 100vw);
+            margin: 0 auto;
+
+            #top {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: calc(30 / #{$desktop} * 100vw);
+            }
+
+            #bottom {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: calc(30 / #{$desktop} * 100vw);
+            }
+
+            .item {
+                font-family: "SF Pro Display";
+                position: relative;
+                padding: 0 calc(40 / #{$desktop} * 100vw) calc(50 / #{$desktop} * 100vw);
+                height: calc(564 / #{$desktop} * 100vw);
+                border-radius: 40px;
+                // width: calc(393 / #{$desktop} * 100vw);
+
+                .content {
+                    position: relative;
+                    z-index: 2;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    gap: calc(20 / #{$desktop} * 100vw);
+
+                    h2 {
+                        margin-top: auto;
+                        color: #fff;
+                        font-size: calc(40 / #{$desktop} * 100vw);
+                        font-weight: 700;
+                        line-height: 120%;
+                    }
+
+                    p {
+                        color: #fff;
+                        font-size: calc(16 / #{$desktop} * 100vw);
+                        font-weight: 400;
+                        line-height: 140%;
+                    }
+                }
+            }
+
+            .item:first-child {
+                background: url(../../images/it-bg-f13371ca.jpg.png);
+                background-size: cover;
+                background-position: right;
+                margin-left: auto;
+            }
+
+            .item:nth-child(2) {
+                background: url(../../images/it-bg-f13371ca2.png);
+                background-size: cover;
+                background-position: center;
+            }
+
+            .item:nth-child(3) {
+                background: url(../../images/it-bg-f13371ca3.png);
+                background-size: cover;
+                background-position: center;
+            }
+
+            #bottom {
+                .item:nth-child(1) {
+                    margin-left: auto;
+                    background: url(../../images/it-bg-f13371ca4.png);
+                    background-size: cover;
+                    background-position: center;
+                    justify-self: center;
+                }
+
+                .item:nth-child(2) {
+                    background: url(../../images/it-bg-f13371ca5.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+
+            .item::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: calc(12 / #{$desktop} * 100vw);
+                bottom: 0;
+                border-radius: 40px;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.74%, #000 100%);
+            }
+        }
+
+        .wrapper {
+            margin: 0 135px 0;
+            display: grid;
+            align-items: center;
+            gap: calc(112 / #{$desktop} * 100vw);
+            grid-template-columns: auto auto;
             border-radius: 16px;
-            width: 100%;
-            margin: calc(79 / #{$desktop} * 100vw) 0 calc(80 / #{$desktop} * 100vw);
+            border: 1px solid rgb(220, 226, 222);
+            background: var(--accent-color);
+            padding: calc(40 / #{$desktop} * 100vw);
+            box-shadow: 0px 0px 16px 0px rgba(38, 50, 57, 0.08);
+
+            .item-title {
+                color: var(--dark-blue);
+
+                font-family: "SF Pro Display";
+                font-size: calc(40 / #{$desktop} * 100vw);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+            }
+
+            .content {
+                margin-top: calc(32 / #{$desktop} * 100vw);
+                border-radius: 16px;
+                border: 1px solid rgb(220, 226, 222);
+                background: var(--accent-color);
+
+                box-shadow: 0px 0px 16px 0px rgba(38, 50, 57, 0.08);
+                padding: calc(24 / #{$desktop} * 100vw);
+
+                p {
+                    color: var(--main-text-color);
+
+                    font-family: "SF Pro Display";
+                    font-size: calc(18 / #{$desktop} * 100vw);
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    letter-spacing: calc(0.36 / #{$desktop} * 100vw);
+                }
+            }
+
+            img {
+                border-radius: 16px;
+                width: 100%;
+                margin: calc(79 / #{$desktop} * 100vw) 0 calc(80 / #{$desktop} * 100vw);
+            }
         }
     }
 }
