@@ -6,7 +6,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Swiper from "swiper";
 import "swiper/scss";
-import { sliderAnimate } from "./scripts/animateSlider";
+// import { sliderAnimate } from "./scripts/animateSlider";
+import { accordeon } from "./scripts/accordeon/accordein";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -300,3 +301,5 @@ try {
 } catch (e) {
     console.log(e);
 }
+
+accordeon();
