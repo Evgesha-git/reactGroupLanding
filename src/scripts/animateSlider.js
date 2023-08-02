@@ -36,6 +36,25 @@ export const sliderAnimate = () => {
         };
     }
 
+    const animateArray = [
+        {
+            next: slide1,
+            forvard: slide1Rev,
+        },
+        {
+            next: slide2,
+            forvard: slide2Rev,
+        },
+        {
+            next: slide3,
+            forvard: slide3Rev,
+        },
+        {
+            next: slide4,
+            forvard: slide4Rev,
+        },
+    ];
+
     function elementInViewport(el) {
         var bounds = el.getBoundingClientRect();
         return (
@@ -58,6 +77,8 @@ export const sliderAnimate = () => {
     let isVisible = false;
 
     let done;
+
+    let animateIndex = -1;
 
     const callbeck = async (entries, observer) => {
         if (entries[0].isIntersecting) {
@@ -85,44 +106,43 @@ export const sliderAnimate = () => {
     window.addEventListener("wheel", async (e) => {
         if (document.body.style.overflow === "hidden") {
             if (!waiting) {
-                if (e.deltaY > 0 && !isWheel.forvart) {
-                    let f;
-                    const data = iter.next();
-                    f = data?.value;
-                    done = data.done;
-                    waiting = !waiting;
+                if (e.deltaY > 0) {
+                    if (animateIndex < 0) {
+                        animateIndex = 0;
+                    }
+                    let f = animateArray[animateIndex];
+                    if (f) {
+                        waiting = !waiting;
+                        animateIndex++;
+                    }
 
                     f?.next().then(() => {
                         waiting = !waiting;
-                        if (done) {
-                            document.body.style.overflow = "";
-                            isVisible = false;
-                        }
                     });
                     isWheel.next = false;
-                } else if (e.deltaY < 0 && isWheel.next) {
-                    let f;
-                    const data = iter.next();
-                    f = data?.value;
-                    done = data.done;
-                    waiting = !waiting;
+
+                    if (animateIndex > animateArray.length - 1) {
+                        document.body.style.overflow = "";
+                        isVisible = false;
+                    }
+                } else if (e.deltaY < 0) {
+                    if (animateIndex < 0 || animateIndex > animateArray.length - 1) {
+                        animateIndex = animateArray.length;
+                    }
+                    animateIndex--;
+                    let f = animateArray[animateIndex];
+                    if (f) {
+                        waiting = !waiting;
+                    }
 
                     f?.forvard().then(() => {
                         waiting = !waiting;
-                        if (done) {
-                            document.body.style.overflow = "";
-                            isVisible = false;
-                        }
                     });
                     isWheel.forvart = true;
-                }
-                if (done && waiting) {
-                    // document.body.style.overflow = "";
-                    iter = getAnimate();
-                    isWheel.forvart = false;
-                    isWheel.next = true;
-                    endAnimate = true;
-                    return;
+                    if (animateIndex < 0) {
+                        document.body.style.overflow = "";
+                        isVisible = false;
+                    }
                 }
             }
         }
@@ -139,44 +159,43 @@ export const sliderAnimate = () => {
         touches.end = e.changedTouches[0].pageY;
         let dir = touches.start - touches.end;
 
-        if (dir > 0 && !isWheel.forvart && isVisible) {
-            let f;
-            const data = iter.next();
-            f = data?.value;
-            done = data.done;
-            waiting = !waiting;
+        if (dir > 0 && isVisible) {
+            if (animateIndex < 0) {
+                animateIndex = 0;
+            }
+            let f = animateArray[animateIndex];
+            if (f) {
+                waiting = !waiting;
+                animateIndex++;
+            }
 
             f?.next().then(() => {
                 waiting = !waiting;
-                if (done) {
-                    document.body.style.overflow = "";
-                    isVisible = false;
-                }
             });
             isWheel.next = false;
-        } else if (dir < 0 && isWheel.next && isVisible) {
-            let f;
-            const data = iter.next();
-            f = data?.value;
-            done = data.done;
-            waiting = !waiting;
+
+            if (animateIndex > animateArray.length - 1) {
+                document.body.style.overflow = "";
+                isVisible = false;
+            }
+        } else if (dir < 0 && isVisible) {
+            if (animateIndex < 0 || animateIndex > animateArray.length - 1) {
+                animateIndex = animateArray.length;
+            }
+            animateIndex--;
+            let f = animateArray[animateIndex];
+            if (f) {
+                waiting = !waiting;
+            }
 
             f?.forvard().then(() => {
                 waiting = !waiting;
-                if (done) {
-                    document.body.style.overflow = "";
-                    isVisible = false;
-                }
             });
             isWheel.forvart = true;
-        }
-        if (done && waiting) {
-            // document.body.style.overflow = "";
-            iter = getAnimate();
-            isWheel.forvart = false;
-            isWheel.next = true;
-            endAnimate = true;
-            return;
+            if (animateIndex < 0) {
+                document.body.style.overflow = "";
+                isVisible = false;
+            }
         }
     });
 };

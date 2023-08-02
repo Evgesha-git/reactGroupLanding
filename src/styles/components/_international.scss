@@ -4,17 +4,18 @@
 #wrapper__index {
     #international {
         overflow-x: hidden;
+        padding: 0 20px;
 
         #title {
             color: #1e1e1e;
             text-align: center;
 
             font-family: "SF Pro Display";
-            font-size: calc(40 / #{$desktop} * 100vw);
+            font-size: 40зч;
             font-weight: 700;
             line-height: 140%;
-            margin-top: calc(100 / #{$desktop} * 100vw);
-            margin-bottom: calc(40 / #{$desktop} * 100vw);
+            margin-top: 120px;
+            margin-bottom: 40px;
         }
 
         .navigation {
@@ -48,30 +49,34 @@
         }
 
         .container {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(2, 1fr);
-            gap: calc(30 / #{$desktop} * 100vw);
-            width: calc(1100 / #{$desktop} * 100vw);
+            display: flex;
+            gap: 30px;
+            max-width: 1440px;
+            // width: calc(1100 / #{$desktop} * 100vw);
             margin: 0 auto;
+            justify-content: center;
+            flex-wrap: wrap;
 
-            #top {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: calc(30 / #{$desktop} * 100vw);
-            }
+            // #top {
+            //     display: grid;
+            //     grid-template-columns: repeat(3, 1fr);
+            //     gap: calc(30 / #{$desktop} * 100vw);
+            // }
 
-            #bottom {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: calc(30 / #{$desktop} * 100vw);
-            }
+            // #bottom {
+            //     display: grid;
+            //     grid-template-columns: repeat(2, 1fr);
+            //     gap: calc(30 / #{$desktop} * 100vw);
+            // }
 
             .item {
+                max-width: 393px;
+                width: 100%;
                 font-family: "SF Pro Display";
                 position: relative;
-                padding: 0 calc(40 / #{$desktop} * 100vw) calc(50 / #{$desktop} * 100vw);
-                height: calc(564 / #{$desktop} * 100vw);
+                padding: 50px 45px 50px 40px;
+                height: calc(552 / #{$desktop} * 100vw);
+                min-height: 552px;
                 border-radius: 40px;
                 // width: calc(393 / #{$desktop} * 100vw);
 
@@ -86,14 +91,14 @@
                     h2 {
                         margin-top: auto;
                         color: #fff;
-                        font-size: calc(40 / #{$desktop} * 100vw);
+                        font-size: 40px;
                         font-weight: 700;
                         line-height: 120%;
                     }
 
                     p {
                         color: #fff;
-                        font-size: calc(16 / #{$desktop} * 100vw);
+                        font-size: 16px;
                         font-weight: 400;
                         line-height: 140%;
                     }
@@ -104,7 +109,7 @@
                 background: url(../../images/it-bg-f13371ca.jpg.png);
                 background-size: cover;
                 background-position: right;
-                margin-left: auto;
+                // margin-left: auto;
             }
 
             .item:nth-child(2) {
@@ -119,21 +124,21 @@
                 background-position: center;
             }
 
-            #bottom {
-                .item:nth-child(1) {
-                    margin-left: auto;
-                    background: url(../../images/it-bg-f13371ca4.png);
-                    background-size: cover;
-                    background-position: center;
-                    justify-self: center;
-                }
-
-                .item:nth-child(2) {
-                    background: url(../../images/it-bg-f13371ca5.png);
-                    background-size: cover;
-                    background-position: center;
-                }
+            // #bottom {
+            .item:nth-child(4) {
+                // margin-left: auto;
+                background: url(../../images/it-bg-f13371ca4.png);
+                background-size: cover;
+                background-position: center;
+                justify-self: center;
             }
+
+            .item:nth-child(5) {
+                background: url(../../images/it-bg-f13371ca5.png);
+                background-size: cover;
+                background-position: center;
+            }
+            // }
 
             .item::after {
                 content: "";
@@ -194,6 +199,18 @@
                 border-radius: 16px;
                 width: 100%;
                 margin: calc(79 / #{$desktop} * 100vw) 0 calc(80 / #{$desktop} * 100vw);
+            }
+        }
+    }
+
+    @media only screen and (max-width: 920px) {
+        #international {
+    
+            .container {
+    
+                .item {
+                    padding: 50px 32px 40px 30px; 
+                }
             }
         }
     }

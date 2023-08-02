@@ -465,22 +465,22 @@
                 .item {
                     &:nth-child(2) .item__animate {
                         left: 0%;
-                        transform: scale(0.4) translate(-32%,-73%);
+                        transform: scale(0.4) translate(-18%,-73%);
                     }
                     &:nth-child(3) .item__animate {
                         left: 0%;
                         top: 27px;
-                        transform: scale(0.4) translate(-38%,-73%);
+                        transform: scale(0.4) translate(-19%,-73%);
                     }
                     &:nth-child(4) .item__animate {
                         left: -23%; //0
                         top: -54px;
-                        transform: scale(0.4) translate(-20%,-63%);
+                        transform: scale(0.4) translate(12%,-63%);
                     }
 
                     .item__animate {
                         left: 0%;
-                        transform: scale(0.4) translate(-26%,-63%);
+                        transform: scale(0.4) translate(-12%,-63%);
                     }
 
                     &:nth-child(1) .text {
@@ -511,6 +511,115 @@
             }
         }
     }
+
+    @media only screen and (max-width: 580px) {
+        #principles {
+            .container {
+                height: 420px;
+                .item {
+                    &:nth-child(2) .item__animate {
+                        left: 0%;
+                        transform: scale(0.4) translate(-26%,-73%);
+                    }
+                    &:nth-child(3) .item__animate {
+                        left: 0%;
+                        top: 27px;
+                        transform: scale(0.4) translate(-23%,-73%);
+                    }
+                    &:nth-child(4) .item__animate {
+                        left: -23%; //0
+                        top: -54px;
+                        transform: scale(0.4) translate(5%,-63%);
+                    }
+
+                    .item__animate {
+                        left: 0%;
+                        transform: scale(0.4) translate(-20%,-63%);
+                    }
+
+                    &:nth-child(1) .text {
+                        width: 344px;
+                        top: auto;
+                        left: 16%;
+                        bottom: 0;
+                    }
+                    &:nth-child(2) .text {
+                        width: 375px;
+                        top: auto;
+                        left: 16%;
+                        bottom: 0;
+                    }
+                    &:nth-child(3) .text {
+                        width: 365px;
+                        top: auto;
+                        left: 16%;
+                        bottom: 0;
+                    }
+                    &:nth-child(4) .text {
+                        width: 365px;
+                        top: auto;
+                        left: 16%;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 481px) {
+        #principles {
+            .container {
+                height: 420px;
+                .item {
+                    &:nth-child(2) .item__animate {
+                        left: 0%;
+                        transform: scale(0.4) translate(-43%,-73%);
+                    }
+                    &:nth-child(3) .item__animate {
+                        left: 0%;
+                        top: 27px;
+                        transform: scale(0.4) translate(-44%,-73%);
+                    }
+                    &:nth-child(4) .item__animate {
+                        left: -23%; //0
+                        top: -54px;
+                        transform: scale(0.4) translate(-23%,-63%);
+                    }
+
+                    .item__animate {
+                        left: 0%;
+                        transform: scale(0.4) translate(-35%,-63%);
+                    }
+
+                    &:nth-child(1) .text {
+                        width: 344px;
+                        top: auto;
+                        left: 10%;
+                        bottom: 0;
+                    }
+                    &:nth-child(2) .text {
+                        width: 375px;
+                        top: auto;
+                        left: 10%;
+                        bottom: 0;
+                    }
+                    &:nth-child(3) .text {
+                        width: 365px;
+                        top: auto;
+                        left: 10%;
+                        bottom: 0;
+                    }
+                    &:nth-child(4) .text {
+                        width: 365px;
+                        top: auto;
+                        left: 10%;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
     @media only screen and (max-width: 461px) {
         #principles {
             .container {

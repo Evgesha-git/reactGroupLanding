@@ -16,7 +16,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            top: 299px;
+            top: 40%;
             // height: 50%;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.74%, #000 100%);
             z-index: 1;
@@ -35,6 +35,17 @@
         .content {
             max-width: 1440px;
             margin: 0 auto;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .container__offer {
+                padding: 0 100px 100px;
+                // margin-top: 40%;
+                // margin-bottom: 0;
+            }
         }
 
         #header {
@@ -95,18 +106,18 @@
                 padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw);
 
                 svg {
-                    width: calc(20 / #{$desktop} * 100vw);
+                    width: 26px;
                 }
 
                 div svg {
-                    width: calc(6 / #{$desktop} * 100vw);
+                    width: 6px;
                 }
             }
 
             #language div {
                 display: flex;
                 align-items: center;
-                gap: calc(6 / #{$desktop} * 100vw);
+                gap: 6px;
             }
 
             #languages-change {
@@ -164,10 +175,8 @@
 
         #offer {
             position: relative;
-            // top: calc(210 / #{$desktop} * 100vw);
-            left: calc(100 / #{$desktop} * 100vw);
-            top: calc(332 / #{$desktop} * 100vw);
-            width: calc(598 / #{$desktop} * 100vw);
+            max-width: 598px;
+            width: 100%;
             z-index: 999;
 
             #title {
@@ -289,13 +298,13 @@
                     gap: calc(8 / #{$desktop} * 100vw);
                     padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw);
 
-                    svg {
-                        width: calc(20 / #{$desktop} * 100vw);
-                    }
+                    // svg {
+                    //     width: calc(20 / #{$desktop} * 100vw);
+                    // }
 
-                    div svg {
-                        width: calc(6 / #{$desktop} * 100vw);
-                    }
+                    // div svg {
+                    //     width: calc(6 / #{$desktop} * 100vw);
+                    // }
                 }
 
                 #language div {
@@ -320,11 +329,11 @@
             }
 
             #offer {
-                position: relative;
-                left: calc(100 / #{$desktop} * 100vw);
-                top: calc(332 / #{$desktop} * 100vw);
-                width: calc(598 / #{$desktop} * 100vw);
-                z-index: 999;
+                // position: relative;
+                // left: calc(100 / #{$desktop} * 100vw);
+                // top: calc(332 / #{$desktop} * 100vw);
+                // width: calc(598 / #{$desktop} * 100vw);
+                // z-index: 999;
 
                 #title {
                     font-size: calc(60 / #{$desktop} * 100vw);
@@ -369,13 +378,64 @@
         }
     }
 
-    @media only screen and (max-width: 600px) {
-        #logotype {
-            color: $black;
-        }
+    @media only screen and (max-width: 1170px) {
+        #main {
+            #offer {
+                #title {
+                    font-size: 48px;
+                }
 
-        #title {
-            font-size: 48px;
+                #subtitle {
+                    margin-top: 20px;
+                    letter-spacing: 0.36px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        #main {
+
+            .content {
+    
+                .container__offer {
+                    padding: 0 10px 57px;
+                    // margin-top: 40%;
+                    // margin-bottom: 0;
+                }
+            }
+            #header {
+                #logotype {
+                    color: $black;
+                }
+
+                #title {
+                    font-size: 48px;
+                }
+
+                button {
+                    color: $black;
+                }
+
+                #language {
+                    svg {
+                        * {
+                            fill: $black;
+                        }
+                    }
+
+                    div svg {
+                        * {
+                            stroke: $black;
+                        }
+                    }
+                }
+            }
+
+            #offer {
+                max-width: 520px;
+            }
         }
     }
 }
