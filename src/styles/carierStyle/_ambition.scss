@@ -1,0 +1,41 @@
+@import "../var/var";
+@import "../fonts/fonts";
+
+#wrapper__carier {
+    .ambition {
+        margin-top: 100px;
+        padding: 0 20px;
+
+        .ambition__container {
+            max-width: 1440px;
+            margin: 0 auto;
+
+            .title {
+                color: $black;
+                text-align: center;
+                font-family: SF Pro Display;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+            }
+
+            .items{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+                margin-top: 40px;
+
+                .img{
+                    border-radius: 40px;
+                    overflow: hidden;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

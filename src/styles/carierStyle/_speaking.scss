@@ -3,7 +3,7 @@
 
 #wrapper__carier {
     .speaking {
-        padding: 120px 20px 0;
+        padding: 108px 20px 0;
         border: 1px solid transparent;
 
         .container {
@@ -11,66 +11,190 @@
             margin: 0 auto;
             border: 1px solid transparent;
 
-            .title {
-                color: $black;
-                text-align: center;
-                font-family: SF Pro Display;
-                font-size: 40px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 140%; /* 56px */
+            .header {
+                max-width: 1088px;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                }
             }
 
-            .items {
-                margin-top: 40px;
+            .hh-container {
+                max-width: 1088px;
+                margin: 20px auto 0;
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
                 gap: 30px;
 
-                .item {
-                    position: relative;
-                    padding: 50px 30px;
+                .left {
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
-                    max-width: 288px;
-                    border-radius: 40px;
+                    justify-content: space-between;
+                    border-radius: 10px;
+                    background: #fafafa;
+                    padding: 35px 20px 20px;
+                    min-width: 327px;
+                    min-height: 635px;
 
-                    &::after {
-                        position: absolute;
-                        display: block;
-                        content: "";
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        border-radius: 40px;
-                        background: rgba(248, 248, 248, 0.5);
-                        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-                        z-index: -1;
+                    .top {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        .title {
+                            color: #000;
+                            font-family: SF Pro Display;
+                            font-size: 30px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 120%;
+                        }
+
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+
+                            .name {
+                                color: $black2;
+                                font-family: SF Pro Display;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 140%;
+                            }
+
+                            a {
+                                color: #139cff;
+                                font-family: SF Pro Display;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 140%;
+                            }
+
+                            .grants__star {
+                                display: flex;
+                                gap: 2px;
+                                justify-content: flex-start;
+
+                                img {
+                                    width: 18px;
+                                    height: 18px;
+                                }
+                            }
+
+                            .desc {
+                                color: #3c3c3c;
+                                font-family: SF Pro Display;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 140%;
+                            }
+                        }
+
+                        .lok {
+                            .name {
+                                font-weight: 400;
+                            }
+                        }
                     }
 
+                    .buttons {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .button {
+                            display: block;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            border: 1px solid #d3d3d3;
+                            padding: 20px;
+                            color: $black2;
+                            font-family: SF Pro Display;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .right {
                     .title {
+                        color: $black;
                         font-family: SF Pro Display;
-                        font-size: 18px;
+                        font-size: 32px;
                         font-style: normal;
                         font-weight: 700;
-                        line-height: 28px;
+                        line-height: 140%;
+                        text-align-last: left;
                     }
 
                     .raite {
                         display: flex;
+                        justify-content: flex-start;
                         gap: 10px;
-                        align-items: flex-start;
+                        margin-top: 10px;
+                        margin-bottom: 20px;
 
                         .stars {
                             display: flex;
                             gap: 2px;
+                            align-items: flex-start;
                         }
-                        .date {
-                            text-align: right;
-                            color: $black2;
+
+                        .link {
+                            font-family: SF Pro Display;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                            a {
+                                color: #139cff;
+                            }
+                        }
+                    }
+
+                    .text {
+                        color: $black2;
+                        text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        font-family: SF Pro Display;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+
+            .speaking__container {
+                max-width: 1063px;
+                margin: 0 auto;
+                .top {
+                    margin-top: 60px;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    align-items: center;
+                    .title {
+                        color: $black;
+                        text-align: right;
+                        font-family: SF Pro Display;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 140%; /* 56px */
+                    }
+
+                    .link {
+                        display: flex;
+                        justify-self: flex-end;
+                        a {
+                            color: #139cff;
                             font-family: SF Pro Display;
                             font-size: 14px;
                             font-style: normal;
@@ -78,14 +202,135 @@
                             line-height: 140%;
                         }
                     }
+                }
 
-                    .desc {
-                        color: $black2;
-                        font-family: SF Pro Display;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 140%;
+                .items {
+                    margin-top: 40px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 30px;
+                    position: relative;
+
+                    .item {
+                        position: relative;
+                        padding: 50px 30px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        max-width: 327px;
+                        border-radius: 40px;
+
+                        &.first {
+                            padding: 40px 30px;
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                list-style: none;
+                                gap: 29px;
+
+                                li {
+                                    display: flex;
+                                    gap: 23px;
+                                    align-items: center;
+                                    .icon-container {
+                                        width: 50px;
+                                        height: 50px;
+                                        display: flex;
+                                        position: relative;
+                                        justify-content: center;
+
+                                        .progress {
+                                        }
+
+                                        .ico {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                        }
+
+                                        .num {
+                                            position: absolute;
+                                            top: 100%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            background: #fff;
+                                            display: block;
+                                            padding: 3px 10px;
+                                            color: $black;
+                                            text-align: center;
+                                            font-family: SF Pro Display;
+                                            font-size: 12px;
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            line-height: 100%;
+                                            width: 56px;
+                                        }
+                                    }
+
+                                    .text {
+                                        color: $black;
+                                        font-family: SF Pro Display;
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        line-height: 28px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &::after {
+                            position: absolute;
+                            display: block;
+                            content: "";
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            border-radius: 40px;
+                            background: rgba(248, 248, 248, 0.5);
+                            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+                            z-index: -1;
+                        }
+
+                        .title {
+                            font-family: SF Pro Display;
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 28px;
+                        }
+
+                        .raite {
+                            display: flex;
+                            gap: 10px;
+                            align-items: flex-start;
+
+                            .stars {
+                                display: flex;
+                                gap: 2px;
+                            }
+                            .date {
+                                text-align: right;
+                                color: $black2;
+                                font-family: SF Pro Display;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 140%;
+                            }
+                        }
+
+                        .desc {
+                            color: $black2;
+                            font-family: SF Pro Display;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                        }
                     }
                 }
             }

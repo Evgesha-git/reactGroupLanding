@@ -2,13 +2,21 @@
 @import "../var/var";
 
 #footer {
-    margin-top: calc(150 / #{$desktop} * 100vw);
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    margin-top: 77px;
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
     background: #080808;
     border-radius: 40px 40px 0 0;
-    height: calc(304 / #{$desktop} * 100vw);
+    // height: calc(304 / #{$desktop} * 100vw);
+    min-height: 304px;
     padding: calc(60 / #{$desktop} * 100vw) calc(56 / #{$desktop} * 100vw) calc(20 / #{$desktop} * 100vw);
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
 
     #main-info {
         grid-column-start: 1;
@@ -18,7 +26,7 @@
         #title {
             color: #fff;
             font-family: "SF Pro Display";
-            font-size: calc(48 / #{$desktop} * 100vw);
+            font-size: 48px;
             font-style: normal;
             font-weight: 700;
             line-height: 140%;
@@ -28,11 +36,11 @@
             color: #fff;
 
             font-family: "SF Pro Display";
-            font-size: calc(18 / #{$desktop} * 100vw);
+            font-size: 18px;
             font-style: normal;
             font-weight: 500;
             line-height: 140%;
-            letter-spacing: calc(0.36 / #{$desktop} * 100vw);
+            letter-spacing: 0.36px;
             margin-top: calc(6 / #{$desktop} * 100vw);
         }
     }
@@ -45,7 +53,7 @@
             color: #fff;
 
             font-family: "SF Pro Display";
-            font-size: calc(24 / #{$desktop} * 100vw);
+            font-size: 20px;
             font-style: normal;
             font-weight: 700;
             line-height: 116.667%;
@@ -65,21 +73,21 @@
                 outline: none;
                 color: #1e1e1e;
                 font-family: "SF Pro Display";
-                font-size: calc(16 / #{$desktop} * 100vw);
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 140%;
-                letter-spacing: calc(0.32 / #{$desktop} * 100vw);
+                letter-spacing: 0.32px;
             }
 
             ::placeholder {
                 color: #1e1e1e;
                 font-family: "SF Pro Display";
-                font-size: calc(16 / #{$desktop} * 100vw);
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 140%;
-                letter-spacing: calc(0.32 / #{$desktop} * 100vw);
+                letter-spacing: 0.32px;
             }
 
             button {
@@ -92,12 +100,12 @@
                 color: #fff;
                 text-align: center;
                 font-family: "SF Pro Display";
-                font-size: calc(16 / #{$desktop} * 100vw);
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 140%;
 
-                letter-spacing: calc(0.32 / #{$desktop} * 100vw);
+                letter-spacing: 0.32px;
             }
 
             button:hover {
@@ -110,11 +118,11 @@
             margin-top: calc(12 / #{$desktop} * 100vw);
             color: var(--main-text-color);
             font-family: "SF Pro Display";
-            font-size: calc(12 / #{$desktop} * 100vw);
+            font-size: 12px;
             font-style: normal;
             font-weight: 500;
             line-height: 140%;
-            letter-spacing: calc(0.24 / #{$desktop} * 100vw);
+            letter-spacing: 0.24px;
 
             a {
                 color: var(--main-text-color);
@@ -126,7 +134,7 @@
     #footer-bottom {
         grid-column-start: 1;
         grid-column-end: 13;
-        gap: calc(20 / #{$desktop} * 100vw);
+        gap: 20px;
         display: flex;
         justify-content: space-between;
 
@@ -139,7 +147,7 @@
                 text-decoration: none;
                 color: #fff;
                 font-family: "SF Pro Display";
-                font-size: calc(16 / #{$desktop} * 100vw);
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 175%;

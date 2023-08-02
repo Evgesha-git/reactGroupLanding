@@ -22,23 +22,24 @@
             display: flex;
             justify-content: space-between;
             max-width: 1040px;
-            margin: 62px auto 30px;
+            margin: 40px auto 30px;
             position: relative;
+            gap: 20px;
 
-            &::before {
-                position: absolute;
-                display: block;
-                content: "";
-                top: -30px;
-                bottom: -30px;
-                left: -100px;
-                right: -100px;
-                border-radius: 40px;
-                background: $white2;
-                opacity: 0.5;
-                box-shadow: $bsh;
-                z-index: -1;
-            }
+            // &::before {
+            //     position: absolute;
+            //     display: block;
+            //     content: "";
+            //     top: -30px;
+            //     bottom: -30px;
+            //     left: -100px;
+            //     right: -100px;
+            //     border-radius: 40px;
+            //     background: $white2;
+            //     opacity: 0.5;
+            //     box-shadow: $bsh;
+            //     z-index: -1;
+            // }
 
             .items {
                 .nums {
@@ -99,33 +100,29 @@
         }
     }
 
-    @media only screen and (max-width: 1440px) {
-        #stats {
-            width: calc(1100 / #{$desktop} * 100vw);
-            gap: calc(30 / #{$desktop} * 100vw);
+    // @media only screen and (max-width: 1440px) {
+    //     #stats {
+    //         width: calc(1100 / #{$desktop} * 100vw);
+    //         gap: calc(30 / #{$desktop} * 100vw);
 
-            .number__counter {
-                div {
-                    gap: calc(10 / #{$desktop} * 100vw);
-                    padding: calc(30 / #{$desktop} * 100vw);
-                }
+    //         .number__counter {
+    //             div {
+    //                 gap: calc(10 / #{$desktop} * 100vw);
+    //                 padding: calc(30 / #{$desktop} * 100vw);
+    //             }
 
-                div:last-child {
-                    padding: calc(30 / #{$desktop} * 100vw) 0;
-                }
+    //             div:last-child {
+    //                 padding: calc(30 / #{$desktop} * 100vw) 0;
+    //             }
 
-                .number {
-                    color: var(--header-color);
-                    // font-size: calc(48 / #{$desktop} * 100vw);
-                }
+    //             .number {
+    //                 color: var(--header-color);
+    //                 // font-size: calc(48 / #{$desktop} * 100vw);
+    //             }
 
-                p {
-                    // font-size: calc(18 / #{$desktop} * 100vw);
-                    letter-spacing: calc(0.36 / #{$desktop} * 100vw);
-                }
-            }
-        }
-    }
+    //         }
+    //     }
+    // }
 
     @media only screen and (max-width: 804px) {
         #stats {

@@ -4,89 +4,188 @@
 #wrapper__index {
     #our-cutting {
         margin: 0 auto;
-        width: calc(1100 / #{$desktop} * 100vw);
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: calc(30 / #{$desktop} * 100vw);
+        // margin-top: 100px;
 
-        #title {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            color: var(--dark-blue);
-            text-align: center;
+        .top {
+            // max-width: 1440px;
+            margin: 0 auto;
+            background: $world_bg;
+            border: 1px solid transparent;
 
-            font-family: "SF Pro Display";
-            font-size: calc(48 / #{$desktop} * 100vw);
-            font-style: normal;
-            font-weight: 700;
-            line-height: 140%;
-            margin-top: calc(120 / #{$desktop} * 100vw);
-            margin-bottom: calc(60 / #{$desktop} * 100vw);
-        }
-
-        .item {
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            padding: calc(40 / #{$desktop} * 100vw);
-            border-radius: 40px;
-            height: calc(570 / #{$desktop} * 100vw);
-            box-shadow: 0px 0px 16px 0px rgba(38, 50, 57, 0.08);
-            text-decoration: none;
-
-            h3 {
-                position: relative;
-                z-index: 2;
-                color: var(--white);
-
-                font-family: "SF Pro Display";
-                font-size: calc(40 / #{$desktop} * 100vw);
+            #title {
+                color: #fff;
+                text-align: center;
+                font-family: SF Pro Display;
+                font-size: 32px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 140%;
+                margin-top: 53px;
             }
 
-            p {
-                position: relative;
-                z-index: 2;
-                color: #f3f9fe;
-                font-family: "SF Pro Display";
-                font-size: calc(20.104 / #{$desktop} * 100vw);
-                font-style: normal;
-                font-weight: 400;
-                line-height: 140%;
-            }
+            .items {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                justify-content: center;
+                margin-top: 50px;
+                padding-bottom: 61px;
 
-            #button {
-                position: relative;
-                z-index: 2;
-                padding: calc(9 / #{$desktop} * 100vw) calc(26 / #{$desktop} * 100vw);
-                background: #0b6b9e;
-                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                .item {
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    padding: 46px 40px 40px;
+                    border-radius: 40px;
+                    max-height: 451px;
+                    max-width: 473px;
+                    height: calc(570 / #{$desktop} * 100vw);
+                    box-shadow: 0px 0px 16px 0px rgba(38, 50, 57, 0.08);
+                    text-decoration: none;
+                    border-radius: 40px;
 
-                color: #fff;
-                text-align: center;
-                font-family: "SF Pro Display";
-                font-size: calc(24 / #{$desktop} * 100vw);
-                font-style: normal;
-                font-weight: 600;
-                line-height: 140%;
-                border-radius: 40px;
+                    &::after {
+                        z-index: 1;
+                        position: absolute;
+                        border-radius: 16px;
+                        content: "";
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.74%, #000 100%);
+                        border-radius: 40px;
+                    }
+
+                    h3 {
+                        position: relative;
+                        z-index: 2;
+                        color: var(--white);
+
+                        font-family: "SF Pro Display";
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 140%;
+                    }
+
+                    .bott {
+                        max-width: 392px;
+                    }
+                    p {
+                        position: relative;
+                        z-index: 2;
+                        color: #f3f9fe;
+                        font-family: "SF Pro Display";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                    }
+                    a {
+                        color: #fff;
+                        font-family: SF Pro Display;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                        margin-top: 8px;
+                        position: relative;
+                        z-index: 999;
+                        // display: block;
+
+                        &::before {
+                            position: absolute;
+                            display: block;
+                            content: url('data:image/svg+xml,\
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">\
+                            <path d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9L1 7ZM15.7071 8.70711C16.0976 8.31658 16.0976 7.68342 15.7071 7.29289L9.34315 0.928932C8.95262 0.538408 8.31946 0.538408 7.92893 0.928932C7.53841 1.31946 7.53841 1.95262 7.92893 2.34315L13.5858 8L7.92893 13.6569C7.53841 14.0474 7.53841 14.6805 7.92893 15.0711C8.31946 15.4616 8.95262 15.4616 9.34315 15.0711L15.7071 8.70711ZM1 9L15 9V7L1 7L1 9Z" fill="white"/>\
+                            </svg>\
+                            ');
+                            width: 14px;
+                            right: 0;
+                            top: 0;
+                            transform: translateX(180%);
+                        }
+                    }
+                }
             }
         }
 
-        .item:after {
-            z-index: 1;
-            position: absolute;
-            border-radius: 16px;
-            content: "";
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.74%, #000 100%);
-            border-radius: 40px;
+        .bottom {
+            padding: 0 20px;
+            .carier {
+                max-width: 830px;
+                margin: 49px auto 57px;
+                display: block;
+                max-height: 449px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                padding: 33px 42px 33px 67px;
+                border-radius: 40px;
+
+                &::after {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    top: 50%;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.74%, #000 100%);
+                    border-radius: 40px;
+                }
+
+                .carier__content {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    #button {
+                        position: relative;
+                        z-index: 2;
+                        padding: 9px 26px;
+                        background: #0b6b9e;
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+                        color: #fff;
+                        text-align: center;
+                        font-family: "SF Pro Display";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 140%;
+                        border-radius: 40px;
+                    }
+
+                    div {
+                        position: relative;
+                        z-index: 999;
+                        h3 {
+                            color: #fff;
+                            font-family: SF Pro Display;
+                            font-size: 40px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 140%;
+                            position: relative;
+                        }
+
+                        p {
+                            color: #fff;
+                            font-family: SF Pro Display;
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                        }
+                    }
+                }
+            }
         }
 
         #geniuspay {
@@ -101,17 +200,15 @@
 
         #job {
             justify-content: flex-end;
-            background: url(../../images/menegetti.png);
+            background: url(../../images/menegetti.png) no-repeat;
             background-size: cover;
             height: calc(671 / #{$desktop} * 100vw);
-            grid-column-start: 1;
-            grid-column-end: 3;
-            padding: calc(70 / #{$desktop} * 100vw) calc(100 / #{$desktop} * 100vw);
+            // padding: calc(70 / #{$desktop} * 100vw) calc(100 / #{$desktop} * 100vw);
 
             div:first-child {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                // display: flex;
+                // justify-content: space-between;
+                // align-items: center;
 
                 div {
                     flex-direction: column;
@@ -119,6 +216,82 @@
 
                     p {
                         margin-right: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 797px) {
+        #our-cutting {
+            .top {
+                // max-width: 1440px;
+                margin: 0 auto;
+                background: $world_bg;
+                border: 1px solid transparent;
+
+                #title {
+                   
+                }
+
+                .items {
+
+                    .item {
+                        min-height: 370px;
+                        max-width: 370px;
+                    }
+                }
+            }
+            .bottom {
+                padding: 0 20px;
+                .carier {
+                    min-height: 423px;
+                    justify-content: center;
+                    gap: 20px;
+                    border-radius: 20px;
+
+                    &::after {
+                        top: 10%;
+                        border-radius: 20px;
+                    }
+
+                    .carier__content {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 20px;
+
+                        #button {
+                            position: relative;
+                            z-index: 2;
+                            padding: 9px 26px;
+                            background: #0b6b9e;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+                            color: #fff;
+                            text-align: center;
+                            font-family: "SF Pro Display";
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 140%;
+                            border-radius: 40px;
+                        }
+
+                        div {
+                            position: relative;
+                            z-index: 999;
+                            h3 {
+                                text-align: center;
+                                font-size: 30px;
+                            }
+
+                            p {
+                                text-align: center;
+                                font-size: 16px;
+                            }
+                        }
                     }
                 }
             }

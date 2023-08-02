@@ -249,14 +249,14 @@ try {
             });
         });
 
-        // gsap.utils.toArray("#principles #title, #principles .item").forEach((element) => {
-        //     animateScrollTrigger(element, {
-        //         trigger: "#principles",
-        //         start: "top 100%",
-        //         end: "bottom 100%",
-        //         markers: false,
-        //     });
-        // });
+        gsap.utils.toArray("#principles #title, #principles .item").forEach((element) => {
+            animateScrollTrigger(element, {
+                trigger: "#principles",
+                start: "top 100%",
+                end: "bottom 100%",
+                markers: false,
+            });
+        });
 
         gsap.utils.toArray("#swipers #title, #swipers .container").forEach((element) => {
             animateScrollTrigger(element, {
@@ -296,7 +296,7 @@ try {
         });
     }
 
-    sliderAnimate();
+    // sliderAnimate();
 } catch (e) {
     console.log(e);
 }
