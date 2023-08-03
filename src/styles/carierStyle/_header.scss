@@ -140,16 +140,23 @@
             }
         }
 
+        .bottom{
+            padding: 0 20px;
+        }
+
         .container {
             max-width: 1234px;
             padding: 0 100px;
             background: url(../../images/carier/header_bg.png);
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
             margin: 0 auto;
             height: 472px;
             border: 1px solid transparent;
             position: relative;
+            overflow: hidden;
+            border-radius: 30px;
 
             &::after {
                 position: absolute;
@@ -157,7 +164,7 @@
                 content: "";
                 border-radius: 30px;
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.74%, #000 100%);
-                top: 90px;
+                top: 10%;
                 bottom: 0;
                 left: 0;
                 right: 0;

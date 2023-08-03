@@ -1,0 +1,233 @@
+@import "../var/var";
+@import "../fonts/fonts";
+
+#wrapper__carier, #wrapper__feedback {
+    #footer {
+        // border-radius: 40px 40px 0 0;
+        background: #080808;
+        padding: 60px 54px 0 56px;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            #main-info {
+                #title {
+                    color: #fff;
+                    text-align: left;
+                    font-family: SF Pro Display;
+                    font-size: 48px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 140%;
+                }
+
+                #text {
+                    color: #fff;
+                    font-family: SF Pro Display;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 25.2px */
+                    letter-spacing: 0.36px;
+                    margin-top: 0;
+                    max-width: 329px;
+                }
+            }
+
+            .footert__fedback {
+                display: flex;
+                flex-direction: column;
+                color: #fff;
+
+                .title {
+                    font-family: SF Pro Display;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 28px;
+                }
+
+                .contacts {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 7px;
+                    a {
+                        color: #fff;
+                        text-align: right;
+                        font-family: SF Pro Display;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                    }
+                }
+
+                .messengers {
+                    display: flex;
+                    margin-top: 47px;
+                    gap: 8px;
+                    align-items: center;
+
+                    .phone {
+                        margin-left: 4px;
+                        a {
+                            color: #fff;
+                            text-align: right;
+                            font-family: SF Pro Display;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                        }
+                    }
+                }
+            }
+        }
+
+        #footer-bottom {
+            margin-top: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            #links {
+                margin-top: 0;
+            }
+
+            .right {
+                display: flex;
+                gap: 48px;
+                #condition {
+                    opacity: 0.4;
+                    color: #fff;
+                    font-family: SF Pro Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    letter-spacing: 0.24px;
+                    text-decoration-line: underline;
+                    max-width: 278px;
+                    a {
+                        opacity: 0.4;
+                        color: #fff;
+                        font-family: SF Pro Display;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 140%;
+                        letter-spacing: 0.24px;
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+
+            .lg-ch {
+                position: relative;
+                button {
+                    cursor: pointer;
+                    background: none;
+                    border: none;
+                    color: $black4;
+
+                    font-family: Exo;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 175%;
+                }
+
+                button:hover {
+                    background: rgba(255, 255, 255, 0.2);
+                    border-radius: 4px;
+                }
+
+                #contact-us {
+                    grid-column-start: 8;
+                    padding: calc(6 / #{$desktop} * 100vw) calc(10 / #{$desktop} * 100vw);
+                }
+
+                #language {
+                    display: flex;
+                    align-items: center;
+                    gap: calc(8 / #{$desktop} * 100vw);
+                    padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw);
+
+                    svg {
+                        width: calc(20 / #{$desktop} * 100vw);
+                        * {
+                            fill: $black4;
+                        }
+                    }
+
+                    div svg {
+                        width: calc(6 / #{$desktop} * 100vw);
+                        * {
+                            fill: $black4;
+                            stroke: $black4;
+                        }
+                    }
+                }
+
+                #language div {
+                    display: flex;
+                    align-items: center;
+                    gap: calc(6 / #{$desktop} * 100vw);
+                }
+
+                #languages-change {
+                    position: absolute;
+                    display: none;
+                    left: -10px;
+                    bottom: calc(50 / #{$desktop} * 100vw);
+                    background: #fff;
+                    border-radius: 4px;
+                    border: 1px solid var(--stroke-color);
+                    box-shadow: 0px 0px 16px 0px rgba(38, 57, 46, 0.08);
+                    padding: calc(8 / #{$desktop} * 100vw) 0;
+
+                    font-family: "SF Pro Display";
+                    font-size: calc(16 / #{$desktop} * 100vw);
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 175%;
+
+                    #ru-language,
+                    #en-language {
+                        color: var(--dark-blue);
+                        cursor: pointer;
+                        width: 100%;
+                        border-radius: unset;
+                        display: flex;
+                        font-weight: 500;
+                        align-items: center;
+                        gap: calc(10 / #{$desktop} * 100vw);
+                        padding: calc(2 / #{$desktop} * 100vw) calc(12 / #{$desktop} * 100vw);
+                    }
+
+                    .active {
+                        background: var(--frame-color);
+                        border-radius: unset;
+
+                        .active-mark {
+                            background: var(--accent-color);
+                        }
+                    }
+
+                    .active-mark {
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 20px;
+                        background: var(--nav-back-color);
+                    }
+
+                    img {
+                        width: calc(16 / #{$desktop} * 100vw);
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

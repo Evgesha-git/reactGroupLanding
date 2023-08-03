@@ -14,11 +14,14 @@
                         <source src="../images/background.webm" type="video/webm" />
                     </video>
                     <button id="playButton" style="display: none"></button>
-                    <div class="content">
-                        <header id="header">
-                            <a href="/" id="logotype"> React Group </a>
-                            <div id="buttons">
-                                <button id="contact-us"></button>
+                    <div class="menu-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="buttons" class="menu-header">
+                        <div class="top">
+                            <div class="lg-ch">
                                 <button id="language">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path
@@ -46,6 +49,16 @@
                                     </button>
                                 </div>
                             </div>
+                            <div class="links">
+                                <a id="contact-us"></a>
+                                <a href="./carier.html">Карьера</a>
+                                <a href="./feedback.html">Обратная связь</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <header id="header">
+                            <a href="/" id="logotype"> React Group </a>
                         </header>
                         <div class="container__offer">
                             <div id="offer">
@@ -59,10 +72,10 @@
             <main>
                 <section id="stats">
                     <div class="container">
-                        <h2 class="numbers__title" id="title">Reactor Group в цифрах</h2>
+                        <h2 class="numbers__title" id="title">React Group в цифрах</h2>
                         <div class="number__counter">
                             <div class="items">
-                                <p class="nums"><span class="number" id="num1">7</span></p>
+                                <p class="nums"><span class="number" id="num1">9</span></p>
                                 <p class="desc">лет на рынке</p>
                             </div>
                             <div class="items">
@@ -114,7 +127,7 @@
                         </div>
                     </div> -->
                     <div class="world__container">
-                        <h2 class="title">Офисы в более 24 странах мира</h2>
+                        <h2 class="title">Осуществляем продажи более чем в 24 странах</h2>
                         <div class="items">
                             <div class="item" id="europe">
                                 <div class="img">
@@ -462,7 +475,7 @@
                 </section>
                 <section id="our-cutting">
                     <div class="top">
-                        <h2 id="title">Наши передовые проекты</h2>
+                        <h2 id="title">Другие наши проекты</h2>
                         <div class="items">
                             <div class="item" id="geniuspay">
                                 <h3>Genius Pay</h3>
@@ -516,124 +529,6 @@
                     </div>
                 </div>
             </footer>
-            <!-- <header class="header">
-            <section class="header__section">
-                <div class="container">
-                    <div class="logo">
-                        <a href="#">React Group</a>
-                    </div>
-                    <div class="header__right">
-                        <a href="#">Contact Us</a>
-                        <div class="header__lang">
-                            <div class="lang__ico"><img src="../images/u_globe.png" alt="lang" /></div>
-                            <div class="lang__select">
-                                <select>
-                                    <option value="en">En</option>
-                                    <option value="ru">Ru</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="header__bottom">
-                <div class="container__bottom">
-                    <h1 class="bottom__title">React Group</h1>
-                    <p class="bottom__text">
-                        Глобальная высокотехнологичная компания, основанная в 2014 году, <br />
-                        специализирующаяся на глобальном наблюдении.
-                    </p>
-                </div>
-            </section>
-        </header>
-        <main class="main">
-            <section class="section__numbers">
-                <div class="container">
-                    <h2 class="numbers__title">Reactor Group в цифрах</h2>
-                    <div class="number__counter">
-                        <div class="items">
-                            <p class="nums"><span class="num">7</span>+</p>
-                            <p class="desc">лет на рынке</p>
-                        </div>
-                        <div class="items">
-                            <p class="nums"><span class="num">14</span></p>
-                            <p class="desc">офисов по всему миру</p>
-                        </div>
-                        <div class="items">
-                            <p class="nums"><span class="num">1600</span></p>
-                            <p class="desc">сотрудников</p>
-                        </div>
-                        <div class="items">
-                            <p class="nums"><span class="num">2000000</span>+</p>
-                            <p class="desc">Продаж в год</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section__world">
-                <div class="container">
-                    <div class="world__ofice">
-                        <h2 class="title">Офисы в более 24 странах мира</h2>
-                    </div>
-                    <div class="world__location">
-                        <div class="item">
-                            <div class="location__img"><img src="../images/europa.png" alt="europa" /></div>
-                            <h3 class="title">Европа</h3>
-                            <p class="desc">Germany, Italy, Spain, Poland, Romania, Bulgaria, Czech Republic, Croatia, Montenegro</p>
-                        </div>
-                        <div class="item">
-                            <div class="location__img"><img src="../images/lat_amer.png" alt="latina america" /></div>
-                            <h3 class="title">Латинская Америка</h3>
-                            <p class="desc">
-                                Mexico, Costa Rica, Panama, <br />
-                                Ecuador, Colombia, Peru, Bolivia, Chile, El Salvador, Honduras, Guatemala
-                            </p>
-                        </div>
-                        <div class="item">
-                            <div class="location__img"><img src="../images/afrika.png" alt="afr" /></div>
-                            <h3 class="title">Африка</h3>
-                            <p class="desc">Nigeria, Ghana, Kenya, Tanzania, Uganda, Rwanda, Ivory Coast</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <secton class="section__activities">
-                <div class="container">
-                    <h2 class="activities__title">Основные направления деятельности</h2>
-                    <div class="activities__items">
-                        <div class="item">
-                            <div class="ico">
-                                <img src="../images/e-com.png" alt="#" />
-                            </div>
-                            <h3 class="title">E-коммерция</h3>
-                            <p class="desc">Беспроблемный опыт покупок: освободите мощь электронной коммерции.</p>
-                        </div>
-                        <div class="item">
-                            <div class="ico">
-                                <img src="../images/curier.png" alt="#" />
-                            </div>
-                            <h3 class="title">Курьерская служба</h3>
-                            <p class="desc">Быстро и надежно: доставляем превосходство с нашей курьерской службой.</p>
-                        </div>
-                        <div class="item">
-                            <div class="ico">
-                                <img src="../images/call.png" alt="#" />
-                            </div>
-                            <h3 class="title">Колл-центры</h3>
-                            <p class="desc">Улучшенный опыт для клиентов: наши преданные колл-центры к вашим услугам.</p>
-                        </div>
-                        <div class="item">
-                            <div class="ico">
-                                <img src="../images/dev.png" alt="#" />
-                            </div>
-                            <h3 class="title">IT разработка</h3>
-                            <p class="desc">Поддержка роста бизнеса с помощью передовых решений в области разработки IT.</p>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                </div>
-            </secton>
-        </main> -->
         </div>
     </body>
 </html>

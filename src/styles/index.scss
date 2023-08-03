@@ -16,8 +16,11 @@
 @import './carierStyle/profit';
 @import './carierStyle/speaking';
 @import './carierStyle/vakant';
-@import './carierStyle/feedback';
 @import './carierStyle/ambition';
+@import './feedback/headerfedback';
+@import './feedback/feedback';
+@import './carierStyle/footer_fb';
+@import './modal';
 
 *{
     margin: 0;

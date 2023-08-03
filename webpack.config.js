@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 // const CopyPlugin = require('copy-webpack-plugin');
 
 const mode = process.env.NODE_ENV || "development";
@@ -34,6 +35,10 @@ module.exports = {
             filename: 'carier.html',
             template: path.resolve(__dirname, "src", "html/carier.html"),
         }),
+        new HtmlWebpackPlugin({
+            filename: 'feedback.html',
+            template: path.resolve(__dirname, "src", "html/feedback.html"),
+        }),
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash].css",
         }),
@@ -41,6 +46,7 @@ module.exports = {
         // new CopyPlugin({
         //   patterns: [{ from: 'static', to: './' }],
         // }),
+        new HtmlWebpackPugPlugin(),
     ],
     module: {
         rules: [

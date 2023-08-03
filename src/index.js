@@ -1,5 +1,6 @@
 import "./html/index.html";
 import "./html/carier.html";
+import "./html/feedback.html";
 
 import "./styles/index.scss";
 import { gsap } from "gsap";
@@ -8,6 +9,9 @@ import Swiper from "swiper";
 import "swiper/scss";
 // import { sliderAnimate } from "./scripts/animateSlider";
 import { accordeon } from "./scripts/accordeon/accordein";
+import { carierSliders } from "./scripts/sliders/carierSlider";
+import { nav } from "./scripts/nav/nav";
+import { modalVidep } from "./scripts/modal/modal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,17 +42,26 @@ try {
         });
     }
 
-    function toggleLanguagesMenu() {
-        var languagesChange = document.querySelector("#languages-change");
+    function toggleLanguagesMenu(e) {
+        let target = e.target;
+        if (target.id !== "language") {
+            target = target.closest("#language");
+        }
+        const parent = target.parentElement;
+
+        var languagesChange = parent.querySelector("#languages-change");
         languagesChange.style.display = languagesChange.style.display === "none" ? "block" : "none";
     }
 
     function setLanguage(selectedLang) {
         lang = selectedLang;
         try {
-            document.querySelector("#ru-language")?.classList.toggle("active", lang === "ru");
-            document.querySelector("#en-language")?.classList.toggle("active", lang === "en");
-            document.querySelector(".enru").textContent = lang.toUpperCase();
+            const ru = document.querySelectorAll("#ru-language");
+            const en = document.querySelectorAll("#en-language");
+            const ruen = document.querySelectorAll(".enru");
+            ru.forEach((item) => item?.classList.toggle("active", lang === "ru"));
+            en.forEach((item) => item?.classList.toggle("active", lang === "ru"));
+            ruen.forEach((item) => (item.textContent = lang.toUpperCase()));
         } catch (e) {
             console.log(e);
         }
@@ -65,29 +78,37 @@ try {
         initAnimations();
     });
 
-    document.querySelector("#language")?.addEventListener("click", function (event) {
-        toggleLanguagesMenu();
-        event.stopPropagation();
+    document.querySelectorAll("#language")?.forEach((item) => {
+        item.addEventListener("click", function (event) {
+            toggleLanguagesMenu(event);
+            event.stopPropagation();
+        });
     });
 
     document.addEventListener("click", function (event) {
-        var languagesChange = document.querySelector("#languages-change");
-        var languageButton = document.querySelector("#language");
+        var languagesChange = document.querySelectorAll("#languages-change");
+        var languageButton = document.querySelectorAll("#language");
 
-        if (!languagesChange?.contains(event.target) && languageButton !== event.target) {
-            languagesChange.style.display = "none";
-        }
+        languagesChange.forEach((item, i) => {
+            if (!item?.contains(event.target) && languageButton[i] !== event.target) {
+                item.style.display = "none";
+            }
+        });
     });
 
-    document.querySelector("#ru-language")?.addEventListener("click", () => {
-        setLanguage("ru");
-        loadLanguageFile(lang).then((languageData) => applyLanguageData(languageData));
-    });
+    [...document.querySelectorAll("#ru-language")].map((item) =>
+        item.addEventListener("click", () => {
+            setLanguage("ru");
+            loadLanguageFile(lang).then((languageData) => applyLanguageData(languageData));
+        })
+    );
 
-    document.querySelector("#en-language")?.addEventListener("click", () => {
-        setLanguage("en");
-        loadLanguageFile(lang).then((languageData) => applyLanguageData(languageData));
-    });
+    [...document.querySelectorAll("#en-language")].map((item) =>
+        item.addEventListener("click", () => {
+            setLanguage("en");
+            loadLanguageFile(lang).then((languageData) => applyLanguageData(languageData));
+        })
+    );
 
     var swiperOptions = {
         slidesPerView: 1,
@@ -169,7 +190,7 @@ try {
 
         // Функция для запуска видео
         if (!video) return;
-        if (!playButton) return
+        if (!playButton) return;
         function playVideo() {
             video.play();
         }
@@ -187,7 +208,7 @@ try {
 
     function initAnimations() {
         const counters = [
-            { element: document.getElementById("num1"), start: 0, end: 7, suffix: "+" },
+            { element: document.getElementById("num1"), start: 0, end: 9, suffix: "+" },
             { element: document.getElementById("num2"), start: 0, end: 14 },
             { element: document.getElementById("num3"), start: 0, end: 1600 },
             { element: document.getElementById("num4"), start: 0, end: 2000000, suffix: "+" },
@@ -303,3 +324,6 @@ try {
 }
 
 accordeon();
+carierSliders();
+nav();
+modalVidep();
