@@ -9,7 +9,7 @@
 @import './components/swipers';
 @import './components/international';
 @import './components/our-cutting';
-@import './components/footer';
+// @import './components/footer';
 @import './carierStyle/header';
 @import './carierStyle/work';
 @import './carierStyle/gonor';
@@ -21,6 +21,9 @@
 @import './feedback/feedback';
 @import './carierStyle/footer_fb';
 @import './modal';
+@import './components/menu';
+@import './feedback/feedback_modal';
+@import './politis/politis';
 
 *{
     margin: 0;

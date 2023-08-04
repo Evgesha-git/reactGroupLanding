@@ -1,6 +1,7 @@
 import "./html/index.html";
 import "./html/carier.html";
 import "./html/feedback.html";
+import "./html/politis.html";
 
 import "./styles/index.scss";
 import { gsap } from "gsap";
@@ -11,7 +12,8 @@ import "swiper/scss";
 import { accordeon } from "./scripts/accordeon/accordein";
 import { carierSliders } from "./scripts/sliders/carierSlider";
 import { nav } from "./scripts/nav/nav";
-import { modalVidep } from "./scripts/modal/modal";
+import { modalVidep, modalMainVideo } from "./scripts/modal/modal";
+import { fedback } from "./scripts/fedbackSend/fedbackSend";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -240,7 +242,7 @@ try {
             {
                 ease: "power2.inOut",
                 duration: 10,
-                height: "100vh",
+                // height: "100vh",
             },
             {
                 scrollTrigger: {
@@ -249,7 +251,7 @@ try {
                     end: "100% 80%",
                     markers: false,
                 },
-                height: window.innerWidth >= 768 ? "calc(640 / 1440 * 100vw)" : "calc(603 / 390 * 100vw)",
+                // height: window.innerWidth >= 768 ? "calc(640 / 1440 * 100vw)" : "calc(603 / 390 * 100vw)",
             }
         );
 
@@ -327,3 +329,5 @@ accordeon();
 carierSliders();
 nav();
 modalVidep();
+modalMainVideo();
+fedback();

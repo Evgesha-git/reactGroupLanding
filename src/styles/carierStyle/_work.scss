@@ -76,6 +76,32 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 140%;
+                position: relative;
+                padding-left: 34px;
+
+                &::before {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    width: 24px;
+                    height: 24px;
+                    left: 0;
+                    top: 0;
+                    // transform: translate(0, -50%);
+                    // border-radius: 50%;
+                }
+                &:nth-child(1)::before {
+                    background: url(../../images/carier/markers/1.svg);
+                }
+                &:nth-child(2)::before {
+                    background: url(../../images/carier/markers/2.svg);
+                }
+                &:nth-child(3)::before {
+                    background: url(../../images/carier/markers/3.svg);
+                }
+                &:nth-child(4)::before {
+                    background: url(../../images/carier/markers/4.svg);
+                }
                 &._last {
                     color: $black;
                     font-family: SF Pro Display;
@@ -83,6 +109,7 @@
                     font-style: normal;
                     font-weight: 700;
                     line-height: 140%;
+                    padding-left: 0;
                 }
             }
         }

@@ -9,10 +9,10 @@
         #top {
             grid-column-start: 1;
             grid-column-end: 13;
-            height: calc(74 / #{$desktop} * 100vw);
-            padding: calc(17 / #{$desktop} * 100vw) calc(15 / #{$desktop} * 100vw);
+            // height: calc(74 / #{$desktop} * 100vw);
+            padding: 17px 15px;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
             border-radius: 0px 0px 16px 16px;
             background: rgba(248, 248, 248, 0.5);
@@ -146,7 +146,7 @@
 
         .container {
             max-width: 1234px;
-            padding: 0 100px;
+            padding: 0 10px;
             background: url(../../images/carier/header_bg.png);
             background-size: cover;
             background-repeat: no-repeat;
