@@ -25,14 +25,12 @@
             .activities__items {
                 display: flex;
                 justify-content: center;
-                // flex-wrap: wrap;
                 gap: 30px;
                 margin-top: 30px;
 
                 .item {
                     position: relative;
                     max-width: 288px;
-                    // max-height: 282px;
                     height: 283px;
                     padding: 30px;
                     box-sizing: border-box;

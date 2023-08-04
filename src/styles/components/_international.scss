@@ -5,7 +5,7 @@
     #international {
         overflow-x: hidden;
         padding: 0 20px 100px;
-        background: #F8F8F8;
+        background: #f8f8f8;
 
         #title {
             color: #1e1e1e;
@@ -53,22 +53,9 @@
             display: flex;
             gap: 30px;
             max-width: 1440px;
-            // width: calc(1100 / #{$desktop} * 100vw);
             margin: 0 auto;
             justify-content: center;
             flex-wrap: wrap;
-
-            // #top {
-            //     display: grid;
-            //     grid-template-columns: repeat(3, 1fr);
-            //     gap: calc(30 / #{$desktop} * 100vw);
-            // }
-
-            // #bottom {
-            //     display: grid;
-            //     grid-template-columns: repeat(2, 1fr);
-            //     gap: calc(30 / #{$desktop} * 100vw);
-            // }
 
             .item {
                 max-width: 393px;
@@ -80,7 +67,6 @@
                 height: calc(552 / #{$desktop} * 100vw);
                 min-height: 552px;
                 border-radius: 40px;
-                // width: calc(393 / #{$desktop} * 100vw);
 
                 .content {
                     position: relative;
@@ -111,7 +97,6 @@
                 background: url(../../images/it-bg-f13371ca.jpg.png);
                 background-size: cover;
                 background-position: right;
-                // margin-left: auto;
             }
 
             .item:nth-child(2) {
@@ -126,9 +111,7 @@
                 background-position: center;
             }
 
-            // #bottom {
             .item:nth-child(4) {
-                // margin-left: auto;
                 background: url(../../images/it-bg-f13371ca4.png);
                 background-size: cover;
                 background-position: center;
@@ -140,7 +123,6 @@
                 background-size: cover;
                 background-position: center;
             }
-            // }
 
             .item::after {
                 content: "";
@@ -207,11 +189,28 @@
 
     @media only screen and (max-width: 920px) {
         #international {
-    
             .container {
-    
                 .item {
-                    padding: 50px 32px 40px 30px; 
+                    padding: 50px 32px 40px 30px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 450px) {
+        #international {
+            #title{
+                font-size: 32px;
+            }
+            .container {
+                .item {
+                    padding: 20px 20px;
+                    min-height: 380px;
+                    .content{
+                        h2{
+                            font-size: 32px;
+                        }
+                    }
                 }
             }
         }

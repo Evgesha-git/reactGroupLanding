@@ -7,8 +7,6 @@
         width: 100%;
         overflow: hidden;
         background: #000;
-        // border-radius: 0px 0px 40px 40px;
-        // height: calc(640 / #{$desktop} * 100vw);
         max-height: 640px;
 
         &::after {
@@ -18,7 +16,6 @@
             left: 0;
             right: 0;
             top: 40%;
-            // height: 50%;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.74%, #000 100%);
             z-index: 1;
         }
@@ -38,7 +35,6 @@
             margin: 0 auto;
             height: 100%;
             position: relative;
-            // display: flex;
             flex-direction: column;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -47,13 +43,11 @@
                 margin-top: 330px;
                 margin-bottom: 61px;
                 padding: 0 100px;
-                // margin-top: 40%;
-                // margin-bottom: 0;
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
 
-                .play__button{
+                .play__button {
                     width: 100px;
                     height: 93px;
                     background-color: #fff;
@@ -66,7 +60,7 @@
                     margin-right: 101px;
                     cursor: pointer;
 
-                    .video__hidden{
+                    .video__hidden {
                         overflow: hidden;
                         width: 0;
                         height: 0;
@@ -120,143 +114,25 @@
                 line-height: 140%;
                 letter-spacing: calc(0.36 / #{$desktop} * 100vw);
             }
-
-            #email {
-                margin-top: calc(32 / #{$desktop} * 100vw);
-
-                form {
-                    margin-top: calc(20 / #{$desktop} * 100vw);
-                    display: flex;
-                    justify-content: space-between;
-                    border-radius: 6px;
-                    background: rgba(231, 244, 236, 0.4);
-                    padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw) calc(26 / #{$desktop} * 100vw);
-
-                    input {
-                        background: none;
-                        border: none;
-                        outline: none;
-                        color: #c9d9cf;
-                        font-family: "SF Pro Display";
-                        font-size: calc(16 / #{$desktop} * 100vw);
-                        font-style: normal;
-                        font-weight: 700;
-                        line-height: 140%;
-                        letter-spacing: calc(0.32 / #{$desktop} * 100vw);
-                    }
-
-                    ::placeholder {
-                        color: #c9d9cf;
-                        font-family: "SF Pro Display";
-                        font-size: calc(16 / #{$desktop} * 100vw);
-                        font-style: normal;
-                        font-weight: 700;
-                        line-height: 140%;
-                        letter-spacing: calc(0.32 / #{$desktop} * 100vw);
-                    }
-
-                    button {
-                        cursor: pointer;
-                        border: none;
-                        border-radius: 4px;
-                        background: #fff;
-                        padding: calc(7 / #{$desktop} * 100vw) calc(32 / #{$desktop} * 100vw);
-
-                        color: var(--header-color);
-                        text-align: center;
-                        font-family: "SF Pro Display";
-                        font-size: calc(16 / #{$desktop} * 100vw);
-                        font-style: normal;
-                        font-weight: 700;
-                        line-height: 140%;
-
-                        letter-spacing: calc(0.32 / #{$desktop} * 100vw);
-                    }
-
-                    button:hover {
-                        background: #26392e;
-                        color: var(--frame-color);
-                    }
-                }
-
-                #condition {
-                    margin-top: calc(12 / #{$desktop} * 100vw);
-                    color: var(--main-text-color);
-                    font-family: "SF Pro Display";
-                    font-size: calc(12 / #{$desktop} * 100vw);
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    letter-spacing: calc(0.24 / #{$desktop} * 100vw);
-                    opacity: 0.4000000059604645;
-
-                    a {
-                        color: var(--main-text-color);
-                        font-weight: 700;
-                    }
-                }
-            }
         }
     }
 
     @media only screen and (max-width: 1440px) {
         #main {
-            // height: calc(640 / #{$desktop} * 100vw);
-
             #header {
                 height: calc(74 / #{$desktop} * 100vw);
                 padding: calc(17 / #{$desktop} * 100vw) calc(15 / #{$desktop} * 100vw);
 
                 #logotype {
                     padding: calc(6 / #{$desktop} * 100vw) calc(10 / #{$desktop} * 100vw);
-                    // font-size: calc(16 / #{$desktop} * 100vw);
                 }
 
                 #contact-us {
                     padding: calc(6 / #{$desktop} * 100vw) calc(10 / #{$desktop} * 100vw);
                 }
-
-                #language {
-                    gap: calc(8 / #{$desktop} * 100vw);
-                    padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw);
-
-                    // svg {
-                    //     width: calc(20 / #{$desktop} * 100vw);
-                    // }
-
-                    // div svg {
-                    //     width: calc(6 / #{$desktop} * 100vw);
-                    // }
-                }
-
-                #language div {
-                    gap: calc(6 / #{$desktop} * 100vw);
-                }
-
-                #languages-change {
-                    top: calc(50 / #{$desktop} * 100vw);
-                    padding: calc(8 / #{$desktop} * 100vw) 0;
-                    font-size: calc(16 / #{$desktop} * 100vw);
-
-                    #ru-language,
-                    #en-language {
-                        gap: calc(10 / #{$desktop} * 100vw);
-                        padding: calc(2 / #{$desktop} * 100vw) calc(12 / #{$desktop} * 100vw);
-                    }
-
-                    img {
-                        width: calc(16 / #{$desktop} * 100vw);
-                    }
-                }
             }
 
             #offer {
-                // position: relative;
-                // left: calc(100 / #{$desktop} * 100vw);
-                // top: calc(332 / #{$desktop} * 100vw);
-                // width: calc(598 / #{$desktop} * 100vw);
-                // z-index: 999;
-
                 #title {
                     font-size: calc(60 / #{$desktop} * 100vw);
                 }
@@ -266,35 +142,10 @@
                     letter-spacing: calc(0.36 / #{$desktop} * 100vw);
                 }
 
-                #email {
-                    margin-top: calc(32 / #{$desktop} * 100vw);
-
-                    form {
-                        margin-top: calc(20 / #{$desktop} * 100vw);
-                        padding: calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw) calc(6 / #{$desktop} * 100vw) calc(26 / #{$desktop} * 100vw);
-
-                        input {
-                            font-size: calc(16 / #{$desktop} * 100vw);
-                            letter-spacing: calc(0.32 / #{$desktop} * 100vw);
-                        }
-
-                        ::placeholder {
-                            font-size: calc(16 / #{$desktop} * 100vw);
-                            letter-spacing: calc(0.32 / #{$desktop} * 100vw);
-                        }
-
-                        button {
-                            padding: calc(7 / #{$desktop} * 100vw) calc(32 / #{$desktop} * 100vw);
-                            font-size: calc(16 / #{$desktop} * 100vw);
-                            letter-spacing: calc(0.32 / #{$desktop} * 100vw);
-                        }
-                    }
-
-                    #condition {
-                        margin-top: calc(12 / #{$desktop} * 100vw);
-                        font-size: calc(12 / #{$desktop} * 100vw);
-                        letter-spacing: calc(0.24 / #{$desktop} * 100vw);
-                    }
+                #condition {
+                    margin-top: calc(12 / #{$desktop} * 100vw);
+                    font-size: calc(12 / #{$desktop} * 100vw);
+                    letter-spacing: calc(0.24 / #{$desktop} * 100vw);
                 }
             }
         }
@@ -315,7 +166,6 @@
             }
         }
     }
-    
 
     @media only screen and (max-width: 1016px) {
         #main {
@@ -325,29 +175,26 @@
                     margin-left: auto;
                     margin-right: auto;
                     padding: 0 100px 100px;
-                    // margin-top: 40%;
-                    // margin-bottom: 0;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
 
                     #offer {
-            
                         #title {
                             text-align: center;
                         }
-            
+
                         #subtitle {
                             text-align: center;
                         }
                     }
-    
-                    .play__button{
+
+                    .play__button {
                         margin-top: 90px;
                         width: 54px;
                         height: 54px;
-                        background-color: rgba(231, 244, 236, 0.40);;
+                        background-color: rgba(231, 244, 236, 0.4);
                         background-image: url(../../images/header/play_min.svg);
                         background-position: 56% center;
                         border-radius: 16px;
@@ -365,8 +212,6 @@
             .content {
                 .container__offer {
                     padding: 0 10px 57px;
-                    // margin-top: 40%;
-                    // margin-bottom: 0;
                 }
             }
             #header {
@@ -380,20 +225,6 @@
 
                 button {
                     color: $black;
-                }
-
-                #language {
-                    svg {
-                        * {
-                            fill: $black;
-                        }
-                    }
-
-                    div svg {
-                        * {
-                            stroke: $black;
-                        }
-                    }
                 }
             }
 

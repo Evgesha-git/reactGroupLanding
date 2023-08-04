@@ -25,14 +25,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: space-between;
     gap: 20px;
     position: fixed;
     background: hsla(0, 0%, 0%, 0.8);
     left: 0;
     top: 0;
-    // bottom: 0;
-    max-height: 640px;
+    max-height: 100vh;
     height: 100%;
     padding: 17px 0;
     width: 220px;
@@ -48,7 +46,7 @@
     }
 
     .top {
-        width: 100%;
+        width: 220px;
     }
 
     .feedback {
@@ -70,7 +68,6 @@
         gap: 20px;
         align-items: flex-end;
         margin-top: 76px;
-        // width: 94px;
         padding-left: 6px;
         padding: 0 19px;
 
@@ -140,7 +137,6 @@
     #languages-change {
         position: absolute;
         display: none;
-        // right: 0;
         top: calc(50 / #{$desktop} * 100vw);
         background: #fff;
         border-radius: 4px;

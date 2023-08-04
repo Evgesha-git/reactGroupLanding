@@ -9,8 +9,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Swiper from "swiper";
 import "swiper/scss";
-// import { sliderAnimate } from "./scripts/animateSlider";
-import { accordeon } from "./scripts/accordeon/accordein";
 import { carierSliders } from "./scripts/sliders/carierSlider";
 import { nav } from "./scripts/nav/nav";
 import { modalVidep, modalMainVideo } from "./scripts/modal/modal";
@@ -321,12 +319,11 @@ try {
         });
     }
 
-    // sliderAnimate();
 } catch (e) {
     console.log(e);
 }
 
-accordeon();
+
 carierSliders();
 nav();
 modalVidep();

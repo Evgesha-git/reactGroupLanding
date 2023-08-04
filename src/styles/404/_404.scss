@@ -3,13 +3,11 @@
 
 #wrapper__404 {
     .header {
-        // padding: 0 20px 0;
         border: 1px solid transparent;
 
         #top {
             grid-column-start: 1;
             grid-column-end: 13;
-            // height: calc(74 / #{$desktop} * 100vw);
             padding: 17px 15px;
             display: flex;
             justify-content: flex-end;

@@ -4,10 +4,8 @@
 #wrapper__index {
     #our-cutting {
         margin: 0 auto;
-        // margin-top: 100px;
 
         .top {
-            // max-width: 1440px;
             margin: 0 auto;
             background: $world_bg;
             border: 1px solid transparent;
@@ -93,7 +91,6 @@
                         margin-top: 8px;
                         position: relative;
                         z-index: 999;
-                        // display: block;
 
                         &::before {
                             position: absolute;
@@ -203,12 +200,9 @@
             background: url(../../images/menegetti.png) no-repeat;
             background-size: cover;
             height: calc(671 / #{$desktop} * 100vw);
-            // padding: calc(70 / #{$desktop} * 100vw) calc(100 / #{$desktop} * 100vw);
 
             div:first-child {
-                // display: flex;
-                // justify-content: space-between;
-                // align-items: center;
+
 
                 div {
                     flex-direction: column;
@@ -225,14 +219,9 @@
     @media only screen and (max-width: 797px) {
         #our-cutting {
             .top {
-                // max-width: 1440px;
                 margin: 0 auto;
                 background: $world_bg;
                 border: 1px solid transparent;
-
-                #title {
-                   
-                }
 
                 .items {
 
