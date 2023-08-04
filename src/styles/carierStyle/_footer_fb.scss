@@ -29,6 +29,7 @@
             flex-wrap: wrap;
 
             .left {
+                display: none;
                 p {
                     color: #fff;
                     font-family: SF Pro Display;
@@ -42,7 +43,7 @@
 
             .right {
                 p {
-                    text-align: right;
+                    text-align: left;
                     a {
                         color: #fff;
                         text-align: right;

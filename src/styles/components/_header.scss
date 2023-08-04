@@ -169,6 +169,16 @@
 
     @media only screen and (max-width: 1016px) {
         #main {
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 13.74%, #000000d4 59%);
+                z-index: 1;
+            }
             .content {
                 .container__offer {
                     margin-top: 131px;
