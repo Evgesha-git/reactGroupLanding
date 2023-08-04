@@ -1,0 +1,155 @@
+@import "../var/var";
+@import "../fonts/fonts";
+
+#wrapper__404 {
+    .header {
+        // padding: 0 20px 0;
+        border: 1px solid transparent;
+
+        #top {
+            grid-column-start: 1;
+            grid-column-end: 13;
+            // height: calc(74 / #{$desktop} * 100vw);
+            padding: 17px 15px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-radius: 0px 0px 16px 16px;
+            background: rgba(248, 248, 248, 0.5);
+
+            #logotype {
+                padding: 6px 10px;
+                color: $black4;
+                font-family: Exo;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 175%;
+                text-decoration: none;
+                position: relative;
+                z-index: 999;
+            }
+        }
+    }
+
+    .container404 {
+        padding: 0 20px;
+        border: 1px solid transparent;
+
+        .container {
+            max-width: 1440px;
+            margin: 29px auto 129px;
+
+            .page {
+                text-align: center;
+                color: $black;
+                font-family: SF Pro Display;
+                font-size: 377.104px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 110%;
+                display: flex;
+                justify-content: center;
+                span {
+                    display: block;
+                }
+
+                .firs {
+                    margin-right: -4px;
+                }
+
+                .zero {
+                    color: transparent;
+                    background-clip: text;
+                    background-image: linear-gradient(180deg, #1d8ffb, #092fb7);
+                }
+
+                .last {
+                    transform: rotateY(180deg);
+                    margin-left: -4px;
+                }
+            }
+
+            .title {
+                color: #000;
+                text-align: center;
+                font-family: SF Pro Display;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+            }
+
+            .text {
+                color: #3c3c3c;
+                text-align: center;
+                font-family: SF Pro Display;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                margin-top: 20px;
+            }
+
+            .link {
+                margin: 40px auto 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 570px;
+                height: 72px;
+                border-radius: 4px;
+                background: linear-gradient(180deg, #1d8ffb 0%, #092fb7 100%), linear-gradient(135deg, #80d9b1 0%, #84f499 100%);
+                text-align: center;
+                color: var(--white, #fff);
+                font-family: SF Pro Display;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px; /* 175% */
+            }
+        }
+    }
+
+    @media only screen and (max-width: 736px) {
+        .container404 {
+            padding: 0 20px;
+    
+            .container {
+                margin: 29px auto 60px;
+    
+                .page {
+                    font-size: 240px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 510px) {
+        .container404 {
+    
+            .container {
+    
+                .page {
+                    font-size: 180px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 360px) {
+        .container404 {
+    
+            .container {
+    
+                .page {
+                    font-size: 120px;
+                }
+
+                .title{
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}

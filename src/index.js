@@ -2,6 +2,7 @@ import "./html/index.html";
 import "./html/carier.html";
 import "./html/feedback.html";
 import "./html/politis.html";
+import "./html/404.html";
 
 import "./styles/index.scss";
 import { gsap } from "gsap";

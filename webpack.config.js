@@ -43,6 +43,10 @@ module.exports = {
             filename: 'politis.html',
             template: path.resolve(__dirname, "src", "html/politis.html"),
         }),
+        new HtmlWebpackPlugin({
+            filename: '404.html',
+            template: path.resolve(__dirname, "src", "html/404.html"),
+        }),
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash].css",
         }),
